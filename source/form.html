@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кэт энерджи</title>
+</head>
+<body class="page__body">
+
+  <!-- Шапка -->
+  <header class="main-header">
+    <a class="main-header__logo">
+      <img class="main-header__logo-image" src="img/logo-desktop.svg" width="202" height="59" alt="Логотип Кэт энерджи.">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="#">главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Каталог продукции</a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a href="#">Подбор программы</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="main-container">
+    <h1 class="main-title">Подбор программы</h1>
+    <section class="form">
+      <h2 class="visually-hidden">Заполнение анкеты</h2>
+      <div class="form__container">
+        <h3 class="visually-hidden">Данные кота</h3>
+        <p class="form__text">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
+
+        <!-- Анкета -->
+        <form class="form__wrapper" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="form__inner">
+            <label class="form__label" for="name">Имя &#8432;</label>
+            <input class="form__field" type="text" id="name" name="name" placeholder="Барсик" required>
+          </p>
+          <p class="form__inner">
+            <label class="form__label" for="number">Вес (кг): &#8432;</label>
+            <input class="form__field" type="text" id="number" name="number" placeholder="7" required>
+          </p>
+          <p class="form__inner">
+            <label class="form__label" for="age">Возраст (лет):</label>
+            <input class="form__field" type="text" id="age" name="age" placeholder="7">
+          </p>
+        </form>
+
+        <!-- Радиокнопки -->
+        <ul class="form__list">
+          <li class="form__item">
+            <label class="form__radio control">
+              <input class="control__input visually-hidden" type="radio" name="some-name">
+              <span class="control__mark control__mark--radio"></span>
+              <span class="control__label">Похудение</span>
+            </label>
+          </li>
+          <li class="form__item">
+            <label class="form__radio control">
+              <input class="control__input visually-hidden" type="radio" name="some-name">
+              <span class="control__mark control__mark--radio"></span>
+              <span class="control__label">Набор массы</span>
+            </label>
+          </li>
+          <li class="form__item">
+            <label class="form__radio control">
+              <input class="control__input visually-hidden" type="radio" name="some-name">
+              <span class="control__mark control__mark--radio"></span>
+              <span class="control__label">Не знаю (Нужен ваш совет)</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Данные владельца кота -->
+      <div class="form__wrapper">
+        <h3 class="form__subtitle">Контактные данные (владельца кота)</h3>
+        <form class="form__wrapper" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="form__inner">
+            <label class="form__label" for="email">E-mail:&#8432;</label>
+            <input type="email" id="email" name="email" placeholder="кuklachev@gmail.com" required>
+          </p>
+          <p class="form__inner">
+            <label class="form__field" class="form__label" for="phone">Телефон:&#8432;</label>
+            <input class="form__field" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="8 (960) 900-60-90" required>
+          </p>
+        </form>
+      </div>
+
+      <!-- Комментарий -->
+      <div class="form__wrapper">
+        <h3 class="form__subtitle">Комментарий</h3>
+        <form class="form__wrapper" action="https://echo.htmlacademy.ru/" method="post">
+          <p>
+            <textarea class="form__comment" name="comment" id="comment-field" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
