@@ -1,22 +1,46 @@
 .additional-product {
   width: 1220px;
   margin: 0 auto;
-}
 
-.additional-product__promo {
-  width: 245px;
-  height: 288px;
-  background-color: var(--bt-basic);
-  background-size: cover;
-  background-position: center center;
-  background-image: url("../../img/additional-product-promo.jpeg") no-repeat;
-}
+  &__title {
+    font-family: @main-font;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+  }
 
-.additional-product__slogan {
-  font-family: "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: var(--color-light);
-  text-decoration: none;
+  &__name {
+    font-family: @main-font;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: var(--color-special-dark);
+  }
+
+  &__content {
+    font-family: @text-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--color-basic-text);
+  }
+
+  &__promo {
+    width: 245px;
+    height: 288px;
+    background-color: var(--bt-basic);
+    background-size: cover;
+    background-position: center center;
+    background-image: url("../../img/additional-product-promo.jpeg") no-repeat;
+  }
+
+  &__slogan {
+    font-family: @text-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--color-light);
+    text-decoration: none;
+  }
 }

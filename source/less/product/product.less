@@ -1,4 +1,41 @@
 .product {
   width: 1220px;
   margin: 0 auto;
+
+  &__card {
+    list-style-type: none;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__title {
+    font-family: @main-font;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: var(--color-special-dark);
+  }
+
+  &__description-text {
+    font-family: @text-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--color-basic-text);
+  }
+
+  &__text {
+    font-family: @text-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--color-basic-text);
+  }
+
+  &__button {
+    color: var(--color-basic-text);
+  }
 }
