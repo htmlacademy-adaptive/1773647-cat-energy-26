@@ -35,7 +35,7 @@
   </header>
 
   <!-- Подбор программы -->
-  <main class="main-container">
+  <main class="main-container additional-container">
     <h1 class="main-container__title">Подбор программы</h1>
     <section class="form">
       <h2 class="visually-hidden">Заполнение анкеты</h2>
@@ -47,15 +47,15 @@
         <form class="form__wrapper" action="https://echo.htmlacademy.ru/" method="post">
           <div class="form__inner">
             <p class="form__questionnaire">
-              <label class="form__label" for="name">Имя &#8432;</label>
+              <label class="form__label form__text" for="name">Имя &#8432;</label>
               <input class="form__field" type="text" id="name" name="name" placeholder="Барсик" required>
             </p>
             <p class="form__questionnaire">
-              <label class="form__label" for="number">Вес (кг): &#8432;</label>
+              <label class="form__label form__text" for="number">Вес (кг): &#8432;</label>
               <input class="form__field" type="text" id="number" name="number" placeholder="7" required>
             </p>
             <p class="form__questionnaire">
-              <label class="form__label" for="age">Возраст (лет):</label>
+              <label class="form__label form__text" for="age">Возраст (лет):</label>
               <input class="form__field" type="text" id="age" name="age" placeholder="7">
             </p>
           </div>
@@ -66,21 +66,21 @@
               <label class="form__radio">
                 <input class="form__radio-input visually-hidden" type="radio" name="some-name">
                 <span class="form__radio-visible form__radio-visible--checked"></span>
-                <span class="form__radio-label">Похудение</span>
+                <span class="form__radio-label form__text">Похудение</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__radio">
                 <input class="form__radio-input visually-hidden" type="radio" name="some-name">
                 <span class="form__radio-visible form__radio-visible--checked"></span>
-                <span class="form__radio-label">Набор массы</span>
+                <span class="form__radio-label form__text">Набор массы</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__radio">
                 <input class="form__radio-input visually-hidden" type="radio" name="some-name">
                 <span class="form__radio-visible"></span>
-                <span class="form__radio-label">Не знаю (Нужен ваш совет)</span>
+                <span class="form__radio-label form__text">Не знаю (Нужен ваш совет)</span>
               </label>
             </li>
           </ul>
@@ -89,11 +89,11 @@
           <div class="form__wrapper">
             <h3 class="form__subtitle">Контактные данные (владельца кота)</h3>
             <p class="form__inner">
-              <label class="form__label" for="email">E-mail:&#8432;</label>
-              <input type="email" id="email" name="email" placeholder="кuklachev@gmail.com" required>
+              <label class="form__label form__text" for="email">E-mail:&#8432;</label>
+              <input class="form__field" type="email" id="email" name="email" placeholder="кuklachev@gmail.com" required>
             </p>
             <p class="form__inner">
-              <label class="form__label" for="phone">Телефон:&#8432;</label>
+              <label class="form__label form__text" for="phone">Телефон:&#8432;</label>
               <input class="form__field" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="8 (960) 900-60-90" required>
             </p>
           </div>
@@ -102,7 +102,7 @@
           <div class="form__wrapper">
             <h3 class="form__subtitle">Комментарий</h3>
             <p>
-              <textarea class="form__comment" name="comment" id="comment-field" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
+              <textarea class="form__field form__comment" name="comment" id="comment-field" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
             </p>
           </div>
 
@@ -114,28 +114,28 @@
                 <label class="form__checkbox">
                   <input class="form__checkbox-input visually-hidden" type="checkbox" name="sweetener" checked>
                   <span class="form__checkbox-visible form__checkbox-visible--checked"></span>
-                  <span class="form__checkbox-label">Сахарозаменитель</span>
+                  <span class="form__checkbox-label form__text">Сахарозаменитель</span>
                 </label>
               </li>
               <li class="form__item">
                 <label class="form__checkbox">
                   <input class="form__checkbox-input visually-hidden" type="checkbox" name="water">
                   <span class="form__checkbox-visible"></span>
-                  <span class="form__checkbox-label">Питьевая вода</span>
+                  <span class="form__checkbox-label form__text">Питьевая вода</span>
                 </label>
               </li>
               <li class="form__item">
                 <label class="form__checkbox">
                   <input class="form__checkbox-input visually-hidden" type="checkbox" name="milk">
                   <span class="form__checkbox-visible"></span>
-                  <span class="form__checkbox-label">Молоко</span>
+                  <span class="form__checkbox-label form__text">Молоко</span>
                 </label>
               </li>
               <li class="form__item">
                 <label class="form__checkbox">
                   <input class="form__checkbox-input visually-hidden" type="checkbox" name="vitamins">
                   <span class="form__checkbox-visible"></span>
-                  <span class="form__checkbox-label">Витамины</span>
+                  <span class="form__checkbox-label form__text">Витамины</span>
                 </label>
               </li>
             </ul>
