@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Кэт энерджи</title>
+  <title>Подбор программы</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="page__body">
 
   <!-- Шапка -->
   <header class="main-header">
     <a class="main-header__logo">
-      <img class="main-header__logo-image" src="img/logo-desktop.svg" width="202" height="59" alt="Логотип Кэт энерджи.">
+      <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи.">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
@@ -20,13 +21,13 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="#">главная</a>
+            <a class="site-list__link" href="#">Главная</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Каталог продукции</a>
+            <a class="site-list__link" href="#">Каталог продукции</a>
           </li>
           <li class="site-list__item site-list__item--active">
-            <a href="#">Подбор программы</a>
+            <a class="site-list__link" href="#">Подбор программы</a>
           </li>
         </ul>
       </div>
@@ -34,7 +35,7 @@
   </header>
 
   <!-- Подбор программы -->
-  <main class="main-container">
+  <main class="main-container additional-container">
     <h1 class="main-container__title">Подбор программы</h1>
     <section class="form">
       <h2 class="visually-hidden">Заполнение анкеты</h2>
@@ -46,15 +47,15 @@
         <form class="form__wrapper" action="https://echo.htmlacademy.ru/" method="post">
           <div class="form__inner">
             <p class="form__questionnaire">
-              <label class="form__label" for="name">Имя &#8432;</label>
+              <label class="form__label form__text" for="name">Имя &#8432;</label>
               <input class="form__field" type="text" id="name" name="name" placeholder="Барсик" required>
             </p>
             <p class="form__questionnaire">
-              <label class="form__label" for="number">Вес (кг): &#8432;</label>
+              <label class="form__label form__text" for="number">Вес (кг): &#8432;</label>
               <input class="form__field" type="text" id="number" name="number" placeholder="7" required>
             </p>
             <p class="form__questionnaire">
-              <label class="form__label" for="age">Возраст (лет):</label>
+              <label class="form__label form__text" for="age">Возраст (лет):</label>
               <input class="form__field" type="text" id="age" name="age" placeholder="7">
             </p>
           </div>
@@ -65,21 +66,21 @@
               <label class="form__radio">
                 <input class="form__radio-input visually-hidden" type="radio" name="some-name">
                 <span class="form__radio-visible form__radio-visible--checked"></span>
-                <span class="form__radio-label">Похудение</span>
+                <span class="form__radio-label form__text">Похудение</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__radio">
                 <input class="form__radio-input visually-hidden" type="radio" name="some-name">
                 <span class="form__radio-visible form__radio-visible--checked"></span>
-                <span class="form__radio-label">Набор массы</span>
+                <span class="form__radio-label form__text">Набор массы</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__radio">
                 <input class="form__radio-input visually-hidden" type="radio" name="some-name">
                 <span class="form__radio-visible"></span>
-                <span class="form__radio-label">Не знаю (Нужен ваш совет)</span>
+                <span class="form__radio-label form__text">Не знаю (Нужен ваш совет)</span>
               </label>
             </li>
           </ul>
@@ -88,11 +89,11 @@
           <div class="form__wrapper">
             <h3 class="form__subtitle">Контактные данные (владельца кота)</h3>
             <p class="form__inner">
-              <label class="form__label" for="email">E-mail:&#8432;</label>
-              <input type="email" id="email" name="email" placeholder="кuklachev@gmail.com" required>
+              <label class="form__label form__text" for="email">E-mail:&#8432;</label>
+              <input class="form__field" type="email" id="email" name="email" placeholder="кuklachev@gmail.com" required>
             </p>
             <p class="form__inner">
-              <label class="form__label" for="phone">Телефон:&#8432;</label>
+              <label class="form__label form__text" for="phone">Телефон:&#8432;</label>
               <input class="form__field" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="8 (960) 900-60-90" required>
             </p>
           </div>
@@ -100,8 +101,8 @@
           <!-- Комментарий -->
           <div class="form__wrapper">
             <h3 class="form__subtitle">Комментарий</h3>
-            <p>
-              <textarea class="form__comment" name="comment" id="comment-field" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
+            <p class="form__comment">
+              <textarea class="form__field" name="comment" id="comment-field" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
             </p>
           </div>
 
@@ -113,28 +114,28 @@
                 <label class="form__checkbox">
                   <input class="form__checkbox-input visually-hidden" type="checkbox" name="sweetener" checked>
                   <span class="form__checkbox-visible form__checkbox-visible--checked"></span>
-                  <span class="form__checkbox-label">Сахарозаменитель</span>
+                  <span class="form__checkbox-label form__text">Сахарозаменитель</span>
                 </label>
               </li>
               <li class="form__item">
                 <label class="form__checkbox">
                   <input class="form__checkbox-input visually-hidden" type="checkbox" name="water">
                   <span class="form__checkbox-visible"></span>
-                  <span class="form__checkbox-label">Питьевая вода</span>
+                  <span class="form__checkbox-label form__text">Питьевая вода</span>
                 </label>
               </li>
               <li class="form__item">
                 <label class="form__checkbox">
                   <input class="form__checkbox-input visually-hidden" type="checkbox" name="milk">
                   <span class="form__checkbox-visible"></span>
-                  <span class="form__checkbox-label">Молоко</span>
+                  <span class="form__checkbox-label form__text">Молоко</span>
                 </label>
               </li>
               <li class="form__item">
                 <label class="form__checkbox">
                   <input class="form__checkbox-input visually-hidden" type="checkbox" name="vitamins">
                   <span class="form__checkbox-visible"></span>
-                  <span class="form__checkbox-label">Витамины</span>
+                  <span class="form__checkbox-label form__text">Витамины</span>
                 </label>
               </li>
             </ul>
@@ -154,7 +155,7 @@
           <p class="contacts__text">ул. Большая Конюшенная, д. 19/8</p>
           <p class="contacts__text">Санкт-Петербург</p>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716352138!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1659080361270!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716352138!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1659080361270!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
   </main>
