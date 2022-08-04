@@ -28,3 +28,15 @@
   color: @color-basic-text;
   list-style-type: none;
 }
+
+@media (min-width: @tablet-width) {
+  .benefits {
+    width: 708px;
+    margin: 0 auto;
+  }
+
+  .benefits__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

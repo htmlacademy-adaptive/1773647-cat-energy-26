@@ -26,12 +26,13 @@
 }
 
 .service-example__list {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin: 0;
 }
 
 .service-example__name {
+  grid-column: 1/2;
   font-family: @main-font;
   font-weight: 400;
   font-size: 24px;
@@ -39,6 +40,7 @@
 }
 
 .service-example__description {
+  grid-column: 2/3;
   font-family: @text-font;
   font-weight: 400;
   font-size: 12px;
@@ -50,6 +52,7 @@
 .service-example__inner {
   display: flex;
   justify-content: center;
+  grid-column: 1/3;
   font-family: @main-font;
   font-weight: 400;
   font-size: 14px;
@@ -60,3 +63,29 @@
 .service-example__desc {
   margin: 0;
 }
+
+@media (min-width: @tablet-width) {
+  .service-example {
+    width: 708px;
+    margin: 0 auto;
+  }
+
+  .service-example__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .service-example__name {
+    grid-column: 1/2;
+  }
+
+  .service-example__description {
+    grid-column: 2/3;
+  }
+
+  .service-example__inner {
+    grid-column: 3/5;
+    justify-content: flex-end;
+  }
+}
+

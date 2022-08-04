@@ -19,7 +19,7 @@
 }
 
 .main-screen__slogan {
-  font-family: var(--main-font);
+  font-family: @main-font;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
@@ -29,7 +29,7 @@
 }
 
 .main-screen__intro {
-  font-family: var(--main-font);
+  font-family: @main-font;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
@@ -42,4 +42,29 @@
 .main-screen__button {
   display: block;
   width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .main-screen {
+    width: 708px;
+    margin: 0 auto;
+  }
+
+  .main-screen__wrapper {
+    padding-left: 88px;
+  }
+
+  .main-screen__slogan {
+    color: @color-dark-text;
+    text-align: left;
+  }
+
+  .main-screen__intro {
+    color: @color-dark-text;
+    text-align: left;
+  }
+
+  .main-screen__button {
+    width: 244px;
+  }
 }
