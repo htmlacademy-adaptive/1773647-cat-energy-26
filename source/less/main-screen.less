@@ -1,9 +1,13 @@
 .main-screen {
-  position: relative;
   width: 280px;
   margin: 0 auto;
 
   outline: 2px solid rgba(255, 0, 0, 0.3);
+}
+
+.main-screen__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .main-screen__wrapper::before {
@@ -11,7 +15,7 @@
   position: absolute;
   width: 100%;
   height: 302px;
-  top: -16px;
+  top: 152px;
   right: 0;
   background-image: url("../img/main-screen/background-main-screen-mobile.jpeg");
   background-repeat: no-repeat;
@@ -84,8 +88,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    top: -110px;
-    right: -731px;
+    top: 0;
+    right: 0;
     background-image: url("../img/main-screen/background-main-screen.jpeg");
     background-repeat: no-repeat;
     z-index: -1;

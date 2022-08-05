@@ -94,5 +94,32 @@
     width: 1220px;
     margin: 0 auto;
   }
+
+  .service-example__wrapper {
+    display: flex;
+  }
+
+  .service-example__box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-example__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .service-example__name {
+    grid-column: 1/2;
+  }
+
+  .service-example__description {
+    grid-column: 2/3;
+  }
+
+  .service-example__inner {
+    grid-column: 1/3;
+    justify-content: flex-start;
+  }
 }
 
