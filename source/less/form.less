@@ -1,4 +1,6 @@
 .form {
+  width: 280px;
+  margin: 0 auto;
   padding-top: 37px;
 
   outline: 2px solid rgba(29, 0, 235, 0.8);
@@ -14,7 +16,7 @@
 }
 
 .form__text {
-  font-family: @main-font;
+  font-family: inherit;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -23,7 +25,7 @@
 }
 
 .form__field {
-  font-family: @main-font;
+  font-family: inherit;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
@@ -40,7 +42,7 @@
 }
 
 .form__subtitle {
-  font-family: @main-font;
+  font-family: inherit;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
@@ -71,4 +73,28 @@
 .form__button {
   font-size: 16px;
   line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    width: 708px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    width: 1220px;
+    margin: 0 auto;
+  }
+
+  .form__data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form__additional {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
