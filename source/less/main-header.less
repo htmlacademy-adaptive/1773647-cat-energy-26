@@ -1,6 +1,6 @@
 .main-header {
-  width: 280px;
-  margin: 0 auto;
+  width: calc(100% - 40px);
+  margin: 0 20px;
   padding-top: 10px;
   padding-bottom: 17px;
 
@@ -17,10 +17,10 @@
 
 @media (min-width: @tablet-width) {
   .main-header {
-    width: 706px;
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
+    width: calc(100% - 60px);
+    margin: 0 30px;
   }
 
   .main-nav__toggle {
@@ -30,7 +30,8 @@
 
 @media (min-width: @desktop-width) {
   .main-header {
-    width: 1220px;
+    width: 85%;
     margin: 0 auto;
+    max-width: 1440px;
   }
 }

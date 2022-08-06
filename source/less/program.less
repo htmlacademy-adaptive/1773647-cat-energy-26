@@ -1,6 +1,6 @@
 .program {
-  width: 280px;
-  margin: 0 auto;
+  width: calc(100% - 40px);
+  margin: 0 20px;
   padding-top: 20px;
 
   outline: 2px solid rgba(89, 0, 255, 0.3);
@@ -38,8 +38,8 @@
 
 @media (min-width: @tablet-width) {
   .program {
-    width: 708px;
-    margin: 0 auto;
+    width: calc(100% - 60px);
+    margin: 0 30px;
   }
 
   .program__inner {
@@ -49,8 +49,9 @@
 
 @media (min-width: @desktop-width) {
   .program {
-    width: 1220px;
+    width: 85%;
     margin: 0 auto;
+    max-width: 1440px;
   }
 
   .program__wrapper {

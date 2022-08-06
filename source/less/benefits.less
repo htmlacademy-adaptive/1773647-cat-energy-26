@@ -1,6 +1,6 @@
 .benefits {
-  width: 280px;
-  margin: 0 auto;
+  width: calc(100% - 40px);
+  margin: 0 20px;
   padding-top: 20px;
   padding-bottom: 50px;
 
@@ -16,23 +16,30 @@
 }
 
 .benefits__list {
+  counter-reset: section;
   margin: 0;
   padding: 0;
 }
 
 .benefits__item {
+  counter-increment: counters 1;
   font-family: @text-font;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: @color-basic-text;
   list-style-type: none;
+
+  &::before {
+    counter-increment: section;
+    content: counters(section);
+  }
 }
 
 @media (min-width: @tablet-width) {
   .benefits {
-    width: 708px;
-    margin: 0 auto;
+    width: calc(100% - 60px);
+    margin: 0 30px;
   }
 
   .benefits__list {
@@ -43,12 +50,13 @@
 
 @media (min-width: @desktop-width) {
   .benefits {
-    width: 1220px;
+    width: 85%;
     margin: 0 auto;
+    max-width: 1440px;
   }
 
   .benefits__list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
 }

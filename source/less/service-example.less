@@ -1,6 +1,6 @@
 .service-example {
-  width: 280px;
-  margin: 0 auto;
+  width: calc(100% - 40px);
+  margin: 0 20px;
   background-color: @bg-basic-light-dark;
   padding-top: 25px;
   padding-bottom: 40px;
@@ -66,8 +66,8 @@
 
 @media (min-width: @tablet-width) {
   .service-example {
-    width: 708px;
-    margin: 0 auto;
+    width: calc(100% - 60px);
+    margin: 0 30px;
   }
 
   .service-example__list {
@@ -91,8 +91,9 @@
 
 @media (min-width: @desktop-width) {
   .service-example {
-    width: 1220px;
+    width: 85%;
     margin: 0 auto;
+    max-width: 1440px;
   }
 
   .service-example__wrapper {

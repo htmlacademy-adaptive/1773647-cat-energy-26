@@ -1,6 +1,6 @@
 .contacts {
-  width: 320px;
-  margin: 0 auto;
+  width: calc(100% - 40px);
+  margin: 0 20px;
 
   outline: 2px solid rgb(235, 149, 0);
   background-color: @bg-basic-light-dark;
@@ -14,7 +14,6 @@
   display: flex;
   justify-content: space-between;
   width: 280px;
-  margin: 0 auto;
   padding-top: 26px;
 
   outline: 2px solid rgb(235, 0, 141);
@@ -40,8 +39,8 @@
 
 @media (min-width: @tablet-width) {
   .contacts {
-    width: 708px;
-    margin: 0 auto;
+    width: calc(100% - 60px);
+    margin: 0 30px;
   }
 
   .contacts__inner-address {
@@ -63,8 +62,9 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
-    width: 1220px;
+    width: 85%;
     margin: 0 auto;
+    min-width: 1440px;
   }
 
   .contacts__inner-address {

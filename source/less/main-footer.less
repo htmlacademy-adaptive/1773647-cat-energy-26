@@ -4,8 +4,8 @@
 }
 
 .main-footer__wrapper {
-  width: 280px;
-  margin: 0 auto;
+  width: calc(100% - 40px);
+  margin: 0 20px;
 
   outline: 2px solid rgb(235, 149, 0);
 }
@@ -20,6 +20,12 @@
   justify-content: center;
 }
 
+.social__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
 .copyright__link {
   display: flex;
   justify-content: space-between;
@@ -29,8 +35,8 @@
   .main-footer__wrapper {
     display: flex;
     justify-content: space-between;
-    width: 708px;
-    margin: 0 auto;
+    width: calc(100% - 60px);
+    margin: 0 30px;
   }
 }
 
@@ -38,7 +44,8 @@
   .main-footer__wrapper {
     display: flex;
     justify-content: space-between;
-    width: 1220px;
-    margin: 0 auto;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
   }
 }
