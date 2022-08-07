@@ -1,6 +1,6 @@
 .form {
-  width: 280px;
-  margin: 0 auto;
+  width: calc(100% - 40px);
+  margin: 0 20px;
   padding-top: 37px;
 
   outline: 2px solid rgba(29, 0, 235, 0.8);
@@ -77,15 +77,16 @@
 
 @media (min-width: @tablet-width) {
   .form {
-    width: 708px;
-    margin: 0 auto;
+    width: calc(100% - 60px);
+    margin: 0 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .form {
-    width: 1220px;
+    width: 85%;
     margin: 0 auto;
+    max-width: 1440px;
   }
 
   .form__data {
