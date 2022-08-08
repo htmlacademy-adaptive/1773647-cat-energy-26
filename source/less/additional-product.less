@@ -1,4 +1,6 @@
 .additional-product {
+  width: calc(100% - 40px);
+  margin: 0 20px;
   padding-top: 25px;
   padding-bottom: 35px;
 
@@ -6,7 +8,7 @@
 }
 
 .additional-product__title {
-  font-family: var(--main-font);
+  font-family: inherit;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
@@ -14,36 +16,119 @@
 }
 
 .additional-product__name {
-  font-family: var(--main-font);
+  font-family: inherit;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
-  color: var(--color-special-dark);
+  color: @color-special-dark;
+  margin: 0;
+}
+
+.additional-product__inner {
+  display: flex;
+  justify-content: space-between;
 }
 
 .additional-product__content {
-  font-family: var(--text-font);
+  font-family: @text-font;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
-  color: var(--color-basic-text);
+  color: @color-basic-text;
+  margin: 0;
 }
 
 .additional-product__promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 280px;
   height: 290px;
-  background-color: var(--bt-basic);
+  background-color: @bt-basic;
   background-size: cover;
   background-position: center center;
   background-image: url("../../../source/img/background-promo-mobile.jpeg");
 }
 
 .additional-product__slogan {
-  font-family: var(--text-font);
+  font-family: @text-font;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: var(--color-light);
+  color: @color-light;
   text-decoration: none;
+  text-align: center;
+  max-width: 161px;
+}
+
+.additional-product__button {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+}
+
+@media (min-width: @tablet-width) {
+  .additional-product {
+    width: calc(100% - 60px);
+    margin: 0 30px;
+  }
+
+  .additional-product__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .additional-product__name {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .additional-product__content {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .additional-product__promo {
+    width: 100%;
+  }
+
+  .additional-product__slogan {
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additional-product {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+
+  .additional-product__wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .additional-product__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .additional-product__content {
+    margin-right: auto;
+  }
+
+  .additional-product__promo {
+    margin-left: auto;
+    width: 245px;
+  }
+
+  .additional-product__slogan {
+    text-align: left;
+  }
+
+  .additional-product__button {
+    width: 244px;
+  }
 }

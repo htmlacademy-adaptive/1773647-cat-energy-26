@@ -1,4 +1,6 @@
 .form {
+  width: calc(100% - 40px);
+  margin: 0 20px;
   padding-top: 37px;
 
   outline: 2px solid rgba(29, 0, 235, 0.8);
@@ -14,7 +16,7 @@
 }
 
 .form__text {
-  font-family: var(--main-font);
+  font-family: inherit;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -23,12 +25,12 @@
 }
 
 .form__field {
-  font-family: var(--main-font);
+  font-family: inherit;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  color: var(--color-basic-text);
+  color: @color-basic-text;
 }
 
 .form__item {
@@ -36,11 +38,11 @@
 }
 
 .form__radio-label {
-  color: var(--color-special-dark);
+  color: @color-special-dark;
 }
 
 .form__subtitle {
-  font-family: var(--main-font);
+  font-family: inherit;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
@@ -62,7 +64,7 @@
 }
 
 .form__desc {
-  font-family: var(--text-font);
+  font-family: @text-font;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -71,4 +73,50 @@
 .form__button {
   font-size: 16px;
   line-height: 20px;
+  border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    width: calc(100% - 60px);
+    margin: 0 30px;
+  }
+
+  .form__text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__field {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__subtitle {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .form__desc {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+
+  .form__data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form__additional {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

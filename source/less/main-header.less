@@ -1,6 +1,37 @@
 .main-header {
+  width: calc(100% - 40px);
+  margin: 0 20px;
   padding-top: 10px;
   padding-bottom: 17px;
 
   outline: 2px solid rgba(0, 255, 81, 0.3);
+}
+
+.main-header__logo {
+  outline: 2px solid rgba(0, 255, 81);
+}
+
+.main-nav {
+  outline: 2px solid rgb(0, 64, 255);
+}
+
+@media (min-width: @tablet-width) {
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 60px);
+    margin: 0 30px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1440px;
+  }
 }

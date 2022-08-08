@@ -1,11 +1,23 @@
 .button {
-  font-family: var(--main-font);
+  font-family: inherit;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--color-light);
-  background-color: var(--bt-basic);
+  color: @color-light;
+  background-color: @bt-basic;
+}
+
+.button__light {
+  color: @color-basic-text;
+  background-color: @bg-basic-light-dark;
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

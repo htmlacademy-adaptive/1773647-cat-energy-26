@@ -3,9 +3,27 @@
 }
 
 .main-container__title {
-  font-family: var(--main-font);
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  font-family: inherit;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
-  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .main-container__title {
+    width: calc(100% - 60px);
+    margin: 0 30px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-container__title {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1440px;
+  }
 }
