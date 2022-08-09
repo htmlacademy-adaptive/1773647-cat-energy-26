@@ -149,6 +149,8 @@
   .benefits {
     width: calc(100% - 60px);
     margin: 0 30px;
+    padding-top: 45px;
+    padding-bottom: 104px;
   }
 
   .benefits__title {
@@ -159,11 +161,122 @@
   .benefits__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-left: 0;
   }
 
   .benefits__item {
+    max-width: 230px;
     font-size: 16px;
     line-height: 24px;
+    padding-top: 183px;
+
+    &:first-child {
+      padding-top: 183px;
+    }
+  }
+
+  .benefits__icons-teaf {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 81px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      background-color: @bt-basic;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 81px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      background-image: url("../img/icons/icons-teaf.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .benefits__icons-tub {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 81px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      background-color: @bt-basic;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 81px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      background-image: url("../img/icons/icon-tub.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .benefits__icons-eat {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 81px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      background-color: @bt-basic;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 81px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      background-image: url("../img/icons/icon-eat.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .benefits__icons-alarm {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 98px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      background-color: @bt-basic;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 98px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      background-image: url("../img/icons/icon-alarm.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 }
 

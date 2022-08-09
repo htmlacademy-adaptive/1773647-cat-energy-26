@@ -4,6 +4,7 @@
 }
 
 .program__inner {
+  padding-bottom: 18px;
   margin-top: 20px;
   background-color: @bg-basic-light-dark;
 }
@@ -58,17 +59,17 @@
   color: @color-dark-text;
   margin: 0;
   padding: 29px 33px 0 20px;
-}
 
-.program__text::before {
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  left: 20px;
-  width: 240px;
-  height: 1px;
-  background-color: @color-basic-text;
-  opacity: 0.1;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    width: 240px;
+    height: 1px;
+    background-color: @color-basic-text;
+    opacity: 0.1;
+  }
 }
 
 .program__button {
@@ -80,17 +81,16 @@
   color: @color-dark-text;
   background-color: transparent;
   padding-top: 38px;
-  padding-bottom: 18px;
-}
 
-.program__button::before {
-  content: "";
-  position: absolute;
-  bottom: 21px;
-  right: -22px;
-  width: 32px;
-  height: 10px;
-  background-image: url("../img/icons/arrow.svg");
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 21px;
+    right: -22px;
+    width: 32px;
+    height: 10px;
+    background-image: url("../img/icons/arrow.svg");
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -101,21 +101,66 @@
 
   .program__inner {
     padding-left: 52px;
+    padding-bottom: 53px;
   }
 
   .program__title {
     font-size: 36px;
     line-height: 36px;
+    padding-top: 77px;
+    padding-left: 0;
+  }
+
+  .program__icons-one {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 81px;
+      left: 393px;
+      width: 200px;
+      height: 201px;
+      background-image: url("../img/icons/cat-back-tablet-1.svg");
+    }
+  }
+
+  .program__icons-two {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 81px;
+      left: 363px;
+      width: 268px;
+      height: 201px;
+      background-image: url("../img/icons/cat-back-tablet-2.svg");
+    }
   }
 
   .program__text {
+    max-width: 340px;
+    padding-top: 24px;
     font-size: 16px;
     line-height: 24px;
+    padding-left: 0;
+
+    &::before {
+      display: none;
+    }
   }
 
   .program__button {
     font-size: 20px;
     line-height: 30px;
+    text-align: start;
+    padding-top: 48px;
+
+    &::before {
+      bottom: 11px;
+      right: -25px;
+    }
   }
 }
 
