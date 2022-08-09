@@ -1,11 +1,12 @@
 .service-example {
-  width: calc(100% - 40px);
-  margin: 0 20px;
   background-color: @bg-basic-light-dark;
   padding-top: 25px;
   padding-bottom: 40px;
+}
 
-  outline: 2px solid rgb(225, 0, 187);
+.service-example__wrapper {
+  width: calc(100% - 40px);
+  margin: 0 20px;
 }
 
 .service-example__title {
@@ -23,12 +24,40 @@
   line-height: 18px;
   color: @color-basic-text;
   margin: 0;
+  padding-top: 40px;
 }
 
 .service-example__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 30px;
   margin: 0;
+}
+
+.service-example__content {
+  position: relative;
+  padding-top: 34px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 124px;
+    height: 56px;
+    border: 1px solid @bg-light-dark;
+    border-radius: 2px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 18px;
+    bottom: 12px;
+    width: 86px;
+    height: 3px;
+    background-color: @bg-basic-light-dark;
+  }
 }
 
 .service-example__name {
@@ -37,6 +66,8 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+  text-align: center;
+  margin: 0;
 }
 
 .service-example__description {
@@ -46,7 +77,9 @@
   font-size: 12px;
   line-height: 12px;
   color: @color-basic-text;
+  text-align: center;
   margin: 0;
+  padding-top: 8px;
 }
 
 .service-example__inner {
@@ -58,6 +91,7 @@
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+  padding-top: 20px;
 }
 
 .service-example__desc {

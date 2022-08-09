@@ -1,5 +1,4 @@
 .contacts {
-  outline: 2px solid rgb(235, 149, 0);
   background-color: @bg-basic-light-dark;
 }
 
@@ -10,11 +9,10 @@
 .contacts__inner-address {
   display: flex;
   justify-content: space-between;
-  padding-top: 26px;
   width: calc(100% - 40px);
   margin: 0 20px;
-
-  outline: 2px solid rgb(235, 0, 141);
+  padding-top: 26px;
+  padding-bottom: 26px;
 }
 
 .contacts__slogan {
@@ -27,12 +25,19 @@
 }
 
 .contacts__text {
+  min-width: 139px;
   font-family: @text-font;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   color: @color-basic-text;
   margin: 0;
+}
+
+.contacts__map {
+  display: block;
+  border: none;
+  height: 362px;
 }
 
 @media (min-width: @tablet-width) {

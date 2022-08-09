@@ -3,8 +3,6 @@
   margin: 0 20px;
   padding-top: 20px;
   padding-bottom: 50px;
-
-  outline: 2px solid rgba(29, 0, 235, 0.8);
 }
 
 .benefits__title {
@@ -19,6 +17,8 @@
   counter-reset: section;
   margin: 0;
   padding: 0;
+  padding-top: 40px;
+  padding-left: 80px;
 }
 
 .benefits__item {
@@ -29,10 +29,119 @@
   line-height: 18px;
   color: @color-basic-text;
   list-style-type: none;
+  padding-top: 24px;
 
   &::before {
     counter-increment: section;
     content: counters(section);
+  }
+
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+.benefits__icons-teaf {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background-color: @bt-basic;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/icons/icons-teaf.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.benefits__icons-tub {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background-color: @bt-basic;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/icons/icon-tub.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.benefits__icons-eat {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background-color: @bt-basic;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/icons/icon-eat.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.benefits__icons-alarm {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background-color: @bt-basic;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/icons/icon-alarm.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
