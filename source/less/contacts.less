@@ -69,10 +69,29 @@
 }
 
 @media (min-width: @desktop-width) {
+  .contacts__wrapper {
+    position: relative;
+  }
+
   .contacts__inner-address {
-    width: 85%;
-    margin: 0 auto;
-    max-width: 1440px;
+    display: grid;
+    grid-template-columns: 163px 155px;
+    gap: 87px;
+    position: absolute;
     background-color: @color-light;
+    padding: 56px 80px;
+    max-width: 404px;
+    top: 95px;
+    left: 110px;
+    margin: 0;
+  }
+
+  .contacts__slogan {
+    padding: 0;
+  }
+
+  .contacts__text {
+    padding: 0;
+    padding-bottom: 18px;
   }
 }
