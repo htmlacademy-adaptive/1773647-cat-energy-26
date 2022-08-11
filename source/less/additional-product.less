@@ -3,8 +3,6 @@
   margin: 0 20px;
   padding-top: 25px;
   padding-bottom: 35px;
-
-  outline: 2px solid rgb(60, 0, 255);
 }
 
 .additional-product__title {
@@ -13,6 +11,26 @@
   font-size: 24px;
   line-height: 24px;
   margin: 0;
+  padding-bottom: 49px;
+}
+
+.additional-product__table:last-child {
+  padding-bottom: 20px;
+}
+
+.additional-product__list {
+  position: relative;
+  padding-bottom: 31px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: @bg-light-dark;
+  }
 }
 
 .additional-product__name {
@@ -23,11 +41,13 @@
   text-transform: uppercase;
   color: @color-special-dark;
   margin: 0;
+  padding-bottom: 13px;
 }
 
 .additional-product__inner {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 15px;
 }
 
 .additional-product__content {
@@ -40,6 +60,7 @@
 }
 
 .additional-product__promo {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,6 +70,27 @@
   background-size: cover;
   background-position: center center;
   background-image: url("../../../source/img/background-promo-mobile.jpeg");
+  margin-top: 35px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -35px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: @bg-light-dark;
+  }
+
+  ::after {
+    position: absolute;
+    content: "";
+    top: 58px;
+    left: 100px;
+    width: 78px;
+    height: 80px;
+    background-image: url("../img/icons/gift.svg");
+  }
 }
 
 .additional-product__slogan {
@@ -60,6 +102,8 @@
   text-decoration: none;
   text-align: center;
   max-width: 161px;
+  margin-top: auto;
+  padding-bottom: 45px;
 }
 
 .additional-product__button {

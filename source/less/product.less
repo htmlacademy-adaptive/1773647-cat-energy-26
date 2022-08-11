@@ -1,10 +1,10 @@
 .product {
   width: calc(100% - 40px);
   margin: 0 20px;
-  padding-top: 21px;
+  padding-top: 40px;
   padding-bottom: 25px;
 
-  outline: 2px solid rgba(0, 255, 81);
+  // outline: 2px solid rgba(0, 255, 8);
 }
 
 .product__list {
@@ -13,13 +13,31 @@
 }
 
 .product__card {
+  position: relative;
   list-style-type: none;
+  padding-top: 20px;
+  padding-bottom: 25px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 1px;
+    transform: translateX(calc(-50vw + 140px));
+    background-color: @bg-additional-light-dark;
+  }
 }
 
 .product__link {
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-decoration: none;
+}
+
+.product__inner {
+  padding-bottom: 22px;
 }
 
 .product__title {
@@ -29,7 +47,14 @@
   line-height: 20px;
   text-transform: uppercase;
   color: @color-special-dark;
+  max-width: 76px;
   margin: 0;
+  padding-bottom: 18px;
+}
+
+.product__description {
+  display: flex;
+  justify-content: space-between;
 }
 
 .product__description-text {
@@ -38,6 +63,7 @@
   font-size: 12px;
   line-height: 16px;
   color: @color-basic-text;
+  margin: 0;
 }
 
 .product__text {
@@ -56,6 +82,58 @@
   line-height: 20px;
   padding: 10px 0;
   border: none;
+  color: @color-light;
+}
+
+.product__card-additional {
+  padding-top: 78px;
+}
+
+.product__caption {
+  position: relative;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: @color-special-dark;
+  margin: 0;
+  padding-bottom: 8px;
+  width: 100%;
+  text-align: center;
+
+  &::before,
+  ::after {
+    content: "";
+    position: absolute;
+    top: -39px;
+    left: 45%;
+    width: 30px;
+    height: 2px;
+    background-color: @color-dark-text;
+    opacity: 0.2;
+  }
+
+  &::after {
+    top: 39px;
+    transform: rotate(-180deg);
+  }
+}
+
+.product__desc {
+  text-align: center;
+  padding-bottom: 21px;
+}
+
+.product__button-light {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+  color: @color-basic-text;
+  padding: 10px 0;
+  border: none;
+  background-color: @bg-basic-light-dark;
 }
 
 @media (min-width: @tablet-width) {

@@ -65,26 +65,18 @@
     width: calc(100% - 60px);
     margin: 0 30px;
     padding-top: 62px;
-    background-color: @color-light;
-    background-image: linear-gradient(180deg, #ffffff 320px, #ffffff 0);
+    background-color: rgba(255, 255, 255, 0);
+    background-image: none;
   }
 
   .main-screen__wrapper {
     display: flex;
     flex-direction: column;
     padding-left: 117px;
-  }
 
-  .main-screen__wrapper::after {
-    content: "";
-    position: absolute;
-    height: 320px;
-    width: 100%;
-    inset: 0 0 auto;
-    background-image: none;
-    background-position: 50%;
-    background-size: cover;
-    z-index: -1;
+    &::after {
+      display: none;
+    }
   }
 
   .main-screen__slogan {
@@ -120,6 +112,7 @@
     margin: 0 auto;
     max-width: 1440px;
     padding-bottom: 86px;
+    background-image: none;
   }
 
   .main-screen__wrapper {
