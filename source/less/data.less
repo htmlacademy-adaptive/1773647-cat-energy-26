@@ -1,19 +1,26 @@
-.data {
-  padding-top: 35px;
+.data__inner {
+  margin: 0;
 }
 
-.data__inner {
+.data__questionnaire {
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
-  padding-bottom: 14px;
   margin: 0;
+  padding-bottom: 27px;
 }
 
 .data__label {
   grid-column: 1/2;
 }
 
-.data__input {
+.data__field {
   grid-column: 2/3;
+}
+
+@media (min-width: @desktop-width) {
+  .form__additional {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
