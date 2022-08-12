@@ -38,24 +38,26 @@
 
 @media (min-width: @tablet-width) {
   .contacts__inner-address {
+    display: grid;
+    grid-template-columns: 163px 200px;
+    gap: 296px;
     width: calc(100% - 60px);
-    margin: 0 30px;
+    margin: 0 auto;
     padding: 56px 0;
-  }
-
-  .contacts__slogan,
-  .contacts__text {
-    padding: 0 40px;
   }
 
   .contacts__slogan {
     font-size: 20px;
     line-height: 26px;
+    padding-left: 40px;
   }
 
   .contacts__text {
     font-size: 16px;
     line-height: 20px;
+    padding-right: 40px;
+    padding-bottom: 18px;
+    text-align: end;
   }
 
   .contacts__map {
@@ -71,8 +73,6 @@
   }
 
   .contacts__inner-address {
-    display: grid;
-    grid-template-columns: 163px 155px;
     gap: 87px;
     position: absolute;
     background-color: @color-light;
@@ -89,6 +89,6 @@
 
   .contacts__text {
     padding: 0;
-    padding-bottom: 18px;
+    padding-left: 0;
   }
 }

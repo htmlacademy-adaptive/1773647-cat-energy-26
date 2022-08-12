@@ -56,15 +56,26 @@
 }
 
 @media (min-width: @desktop-width) {
-  .site-list__link {
+  .site-list__link-light {
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
     color: @color-light;
   }
 
+  .site-list__link {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   .site-list__item--active::before {
-    width: 71px;
+    width: calc(100% - 27px);
+    background-color: @bt-basic;
+  }
+
+  .site-list__item-light--active::before {
+    width: calc(100% - 27px);
     background-color: @color-light;
   }
 }
