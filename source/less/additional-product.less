@@ -216,6 +216,22 @@
   .additional-product__list {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding: 15px 0 18px 0;
+
+    &::before {
+      display: block;
+      top: 0;
+    }
+  }
+
+  .additional-product__name {
+    padding-bottom: 0;
+  }
+
+  .additional-product__inner {
+    padding-bottom: 0;
   }
 
   .additional-product__content {
@@ -225,10 +241,19 @@
   .additional-product__promo {
     margin-left: auto;
     width: 245px;
+    height: 289px;
+    margin-top: 0;
+
+    &::after {
+      top: 55px;
+      left: 81px;
+    }
   }
 
   .additional-product__slogan {
-    text-align: left;
+    text-align: center;
+    margin: auto;
+    padding-top: 184px;
   }
 
   .additional-product__button {
