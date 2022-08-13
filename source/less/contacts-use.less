@@ -1,5 +1,6 @@
-.contacts-use__subtitle {
+.contacts-use__wrapper {
   padding-bottom: 35px;
+  padding-top: 35px;
 }
 
 .contacts-use__wrapper p:last-child {
@@ -7,12 +8,20 @@
 }
 
 .contacts-use__inner {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
   align-items: center;
   margin: 0;
   padding: 0;
   padding-bottom: 14px;
+}
+
+.contacts-use__label {
+  padding-right: 14px;
+}
+
+.contacts-use__input-email,
+.contacts-use__input-phone {
+  flex-grow: 1;
 }
 
 .contacts-use__input-email {
@@ -27,4 +36,28 @@
   background-repeat: no-repeat;
   background-size: 20px 20px;
   background-position: 95%;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts-use {
+    padding-top: 70px;
+  }
+
+  .contacts-use__wrapper {
+    padding-top: 76px;
+    padding-bottom: 0;
+  }
+
+  .contacts-use__inner {
+    display: flex;
+  }
+
+  .contacts-use__label {
+    padding-right: 14px;
+  }
+
+  .contacts-use__input-email,
+  .contacts-use__input-phone {
+    flex-grow: 1;
+  }
 }

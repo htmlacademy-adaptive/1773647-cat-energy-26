@@ -31,7 +31,6 @@
   width: 100%;
 }
 
-
 .information__desc {
   display: block;
   font-family: @text-font;
@@ -40,4 +39,30 @@
   line-height: 16px;
   text-align: center;
   padding-top: 21px;
+}
+
+@media (min-width: @tablet-width) {
+  .information__inner {
+    padding-top: 57px;
+  }
+
+  .information__inner,
+  .information__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 61px;
+  }
+
+  .information__item {
+    position: relative;
+    padding-bottom: 50px;
+  }
+
+  .information__checkbox-visible {
+    top: 0;
+  }
+
+  .information__desc {
+    text-align: start;
+  }
 }

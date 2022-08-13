@@ -3,19 +3,45 @@
 }
 
 .data__questionnaire {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
   align-items: center;
   margin: 0;
   padding-bottom: 27px;
 }
 
+.data__inner p:last-child {
+  padding-bottom: 0;
+}
+
 .data__label {
-  grid-column: 1/2;
+  padding-right: 13px;
 }
 
 .data__field {
-  grid-column: 2/3;
+  flex-grow: 1;
+}
+
+@media (min-width: @tablet-width) {
+  .data__inner {
+    padding-bottom: 72px;
+  }
+
+  .data__questionnaire {
+    display: flex;
+    padding-bottom: 20px;
+  }
+
+  .data__inner p:last-child {
+    padding-bottom: 0;
+  }
+
+  .data__label {
+    padding-right: 13px;
+  }
+
+  .data__field {
+    flex-grow: 1;
+  }
 }
 
 @media (min-width: @desktop-width) {
