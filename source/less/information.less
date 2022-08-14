@@ -2,6 +2,32 @@
   padding-bottom: 32px;
 }
 
+.information__title {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 94vw;
+    height: 2px;
+    background-color: @bt-basic;
+    z-index: -2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 0;
+    width: 164px;
+    height: 4px;
+    background-color: @color-light;
+    z-index: -1;
+  }
+}
+
 .information__inner {
   padding-top: 34px;
 }
@@ -42,6 +68,18 @@
 }
 
 @media (min-width: @tablet-width) {
+  .information__title::before {
+    left: -4rem;
+    top: 20px;
+    width: 100vw;
+  }
+
+  .information__title::after {
+    left: -36px;
+    top: 19px;
+    width: 290px;
+  }
+
   .information__inner {
     padding-top: 57px;
   }
@@ -70,6 +108,10 @@
 @media (min-width: @desktop-width) {
   .information {
     padding-bottom: 80px;
+  }
+
+  .information__title::before {
+    left: -7rem;
   }
 
   .information__inner {

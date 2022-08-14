@@ -6,7 +6,7 @@
     position: absolute;
     top: 14px;
     left: 0;
-    width: 100vw;
+    width: 94vw;
     height: 2px;
     background-color: @bt-basic;
     z-index: -2;
@@ -70,17 +70,24 @@
   }
 
   .contacts-use__subtitle::before {
+    left: -4rem;
     top: 20px;
+    width: 100vw;
   }
 
   .contacts-use__subtitle::after {
+    left: -36px;
     top: 19px;
-    width: 554px;
+    width: 593px;
   }
 
   .contacts-use__wrapper {
     padding-top: 76px;
     padding-bottom: 0;
+  }
+
+  .contacts__wrapper-light {
+    background-color: @color-light;
   }
 
   .contacts-use__inner {
@@ -102,5 +109,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
+  }
+
+  .contacts-use__subtitle::before {
+    left: -7rem;
   }
 }
