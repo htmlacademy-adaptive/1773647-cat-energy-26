@@ -23,8 +23,6 @@
 
 @media (min-width: @tablet-width) {
   .radio {
-    min-width: 630px;
-    min-height: 196px;
     border: 1px solid @br-color-light;
     padding: 25px 0 0 28px;
   }
@@ -42,5 +40,21 @@
     width: 40px;
     height: 40px;
     border: 1px solid @bg-light-dark;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .radio {
+    max-width: 488px;
+    padding-top: 30px;
+  }
+
+  .radio__label {
+    padding-left: 80px;
+  }
+
+  .radio__visible {
+    left: 20px;
+    top: -5px;
   }
 }
