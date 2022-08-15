@@ -14,7 +14,6 @@
 }
 
 .benefits__list {
-  counter-reset: section;
   margin: 0;
   padding: 0;
   padding-top: 40px;
@@ -22,7 +21,6 @@
 }
 
 .benefits__item {
-  counter-increment: counters 1;
   font-family: @text-font;
   font-weight: 400;
   font-size: 14px;
@@ -31,11 +29,6 @@
   list-style-type: none;
   padding-top: 24px;
   max-width: 200px;
-
-  &::before {
-    counter-increment: section;
-    content: counters(section);
-  }
 
   &:first-child {
     padding-top: 0;
@@ -120,12 +113,15 @@
   }
 
   .benefits__list {
+    counter-reset: section 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-left: 0;
   }
 
   .benefits__item {
+    position: relative;
+    counter-increment: section 1;
     max-width: 230px;
     font-size: 16px;
     line-height: 24px;
@@ -133,6 +129,20 @@
 
     &:first-child {
       padding-top: 183px;
+    }
+
+    &::before {
+      content: counters(section);
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      counter-increment: section;
+      font-family: inherit;
+      font-size: 280px;
+      line-height: 280px;
+      color: @bg-basic-light-dark;
     }
   }
 
