@@ -24,7 +24,7 @@
   line-height: 18px;
   color: @color-basic-text;
   margin: 0;
-  padding-top: 40px;
+  margin-top: 40px;
 }
 
 .service-example__list {
@@ -36,7 +36,7 @@
 
 .service-example__content {
   position: relative;
-  padding-top: 34px;
+  margin-top: 34px;
 }
 
 .service-example__name {
@@ -54,17 +54,22 @@
 
 .service-example__description {
   grid-column: 2/3;
-  position: absolute;
-  left: 16%;
-  bottom: -10px;
   font-family: @text-font;
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
   color: @color-basic-text;
-  margin: 0 auto;
-  padding: 0 15px;
+  margin: 0;
+}
+
+.service-example__description-text {
+  display: block;
+  position: relative;
+  max-width: 90px;
+  bottom: 17px;
+  left: 12px;
+  padding: 4px 5px;
   background-color: @bg-basic-light-dark;
 }
 
@@ -77,7 +82,7 @@
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
-  padding-top: 20px;
+  margin-top: 20px;
 }
 
 .service-example__desc {
@@ -116,7 +121,7 @@
   .service-example__text {
     font-size: 16px;
     line-height: 24px;
-    padding-top: 63px;
+    margin-top: 63px;
   }
 
   .service-example__list {
@@ -126,21 +131,29 @@
   }
 
   .service-example__content {
-    padding-top: 69px;
+    margin-top: 69px;
   }
 
   .service-example__name {
     grid-column: 1/2;
     font-size: 30px;
     line-height: 37px;
+    padding-top: 15px;
+    padding-bottom: 20px;
   }
 
   .service-example__description {
     grid-column: 2/3;
     font-size: 14px;
     line-height: 14px;
-    background-color: @color-light;
     width: 100%;
+  }
+
+  .service-example__description-text {
+    max-width: 130px;
+    bottom: 12px;
+    left: 12px;
+    background-color: @color-light;
   }
 
   br {
@@ -153,7 +166,7 @@
     flex-wrap: wrap;
     text-align: end;
     width: 174px;
-    padding-top: 65px;
+    margin-top: 65px;
   }
 
   .service-example__desc {
@@ -193,7 +206,7 @@
 
   .service-example__text {
     max-width: 500px;
-    padding-top: 146px;
+    margin-top: 146px;
   }
 
   .service-example__list {
@@ -202,7 +215,7 @@
   }
 
   .service-example__content {
-    padding-top: 84px;
+    margin-top: 84px;
   }
 
   .service-example__name {
@@ -211,6 +224,9 @@
 
   .service-example__description {
     grid-column: 2/3;
+  }
+
+  .service-example__description-text {
     background-color: @bg-basic-light-dark;
   }
 
