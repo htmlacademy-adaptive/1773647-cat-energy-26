@@ -1,12 +1,13 @@
 .service-example {
   background-color: @bg-basic-light-dark;
-  margin-top: 25px;
   padding-bottom: 40px;
 }
 
 .service-example__wrapper {
+  display: inline-block;
   width: calc(100% - 40px);
   margin: 0 20px;
+  margin-top: 25px;
 }
 
 .service-example__title {
@@ -92,7 +93,6 @@
 @media (min-width: @tablet-width) {
   .service-example {
     position: relative;
-    margin-top: 43px;
     padding-bottom: 55px;
     background-image: linear-gradient(180deg, @color-light 495px, @bg-basic-light-dark 0);
 
@@ -111,6 +111,7 @@
   .service-example__wrapper {
     width: calc(100% - 60px);
     margin: 0 30px;
+    margin-top: 43px;
   }
 
   .service-example__title {

@@ -1,4 +1,30 @@
 .additional-product {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: @bt-basic;
+    z-index: -2;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 40px;
+    left: 0;
+    width: 270px;
+    height: 6px;
+    background-color: @color-light;
+    z-index: -1;
+  }
+}
+
+.additional-product__container {
   width: calc(100% - 40px);
   margin: 0 20px;
   padding-top: 25px;
@@ -12,32 +38,6 @@
   line-height: 24px;
   margin: 0;
   margin-bottom: 49px;
-}
-
-.additional-product__caption {
-  position: relative;
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: 13px;
-    left: 0;
-    width: 94vw;
-    height: 2px;
-    background-color: @bt-basic;
-    z-index: -2;
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    top: 13px;
-    left: 0;
-    width: 247px;
-    height: 2px;
-    background-color: @color-light;
-    z-index: -1;
-  }
 }
 
 .additional-product__table:last-child {
@@ -112,7 +112,7 @@
     position: absolute;
     content: "";
     top: 58px;
-    left: 85px;
+    left: 100px;
     width: 78px;
     height: 80px;
     background-image: url("../img/icons/gift.svg");
@@ -140,19 +140,25 @@
 
 @media (min-width: @tablet-width) {
   .additional-product {
+    &::before {
+      top: 47px;
+    }
+
+    &::after {
+      left: 30px;
+      top: 45px;
+      width: 413px;
+    }
+  }
+
+  .additional-product__container {
     width: calc(100% - 60px);
     margin: 0 30px;
     padding-bottom: 76px;
   }
 
-  .additional-product__caption::before {
-    left: -4rem;
-    width: 100vw;
-  }
-
-  .additional-product__caption::after {
-    left: -36px;
-    width: 410px;
+  .additional-product__caption {
+    margin-left: 36px;
   }
 
   .additional-product__list {
@@ -173,15 +179,6 @@
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 80px;
-  }
-
-  .additional-product__caption&::before {
-    top: 23px;
-  }
-
-  .additional-product__caption&::after {
-    top: 23px;
-    width: 410px;
   }
 
   .additional-product__name {
@@ -217,14 +214,18 @@
 }
 
 @media (min-width: @desktop-width) {
-  .additional-product {
+  .additional-product::after {
+    left: 70px;
+  }
+
+  .additional-product__container {
     width: 85%;
     margin: 0 auto;
     max-width: 1440px;
   }
 
-  .additional-product__caption::before {
-    left: -7rem;
+  .additional-product__caption {
+    margin-left: 0;
   }
 
   .additional-product__wrapper {
