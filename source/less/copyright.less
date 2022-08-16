@@ -1,4 +1,6 @@
 .copyright__link {
+  display: flex;
+  justify-content: space-between;
   font-family: @text-font;
   font-weight: 400;
   font-size: 16px;
@@ -9,4 +11,18 @@
 
 .copyright__text {
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__link {
+    align-items: center;
+  }
+
+  .copyright__text {
+    padding-right: 22px;
+  }
+
+  .copyring__img {
+    align-content: center;
+  }
 }

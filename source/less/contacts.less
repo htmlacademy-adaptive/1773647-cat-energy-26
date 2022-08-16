@@ -1,20 +1,18 @@
 .contacts {
-  outline: 2px solid rgb(235, 149, 0);
-  background-color: @bg-basic-light-dark;
+  position: relative;
 }
 
-.contacts__wrapper {
-  background-color: @color-light;
+.contacts__wrapper-dark {
+  background-color: @bg-basic-light-dark;
 }
 
 .contacts__inner-address {
   display: flex;
   justify-content: space-between;
-  padding-top: 26px;
   width: calc(100% - 40px);
   margin: 0 20px;
-
-  outline: 2px solid rgb(235, 0, 141);
+  padding-top: 26px;
+  padding-bottom: 26px;
 }
 
 .contacts__slogan {
@@ -27,6 +25,7 @@
 }
 
 .contacts__text {
+  min-width: 139px;
   font-family: @text-font;
   font-weight: 400;
   font-size: 14px;
@@ -35,25 +34,34 @@
   margin: 0;
 }
 
+.contacts__map {
+  display: block;
+  border: none;
+  height: 362px;
+}
+
 @media (min-width: @tablet-width) {
   .contacts__inner-address {
+    display: grid;
+    grid-template-columns: 163px 200px;
+    gap: 296px;
     width: calc(100% - 60px);
-    margin: 0 30px;
-  }
-
-  .contacts__slogan,
-  .contacts__text {
-    padding: 0 40px;
+    margin: 0 auto;
+    padding: 56px 0;
   }
 
   .contacts__slogan {
     font-size: 20px;
     line-height: 26px;
+    padding-left: 40px;
   }
 
   .contacts__text {
     font-size: 16px;
     line-height: 20px;
+    padding-right: 40px;
+    padding-bottom: 18px;
+    text-align: end;
   }
 
   .contacts__map {
@@ -63,10 +71,27 @@
 }
 
 @media (min-width: @desktop-width) {
+  .contacts__wrapper,
+  .contacts__wrapper-dark {
+    position: relative;
+  }
+
   .contacts__inner-address {
-    width: 85%;
-    margin: 0 auto;
-    max-width: 1440px;
+    gap: 87px;
+    position: absolute;
     background-color: @color-light;
+    padding: 56px 80px;
+    max-width: 404px;
+    top: 95px;
+    left: 110px;
+    margin: 0;
+  }
+
+  .contacts__slogan {
+    padding: 0;
+  }
+
+  .contacts__text {
+    padding-left: 0;
   }
 }
