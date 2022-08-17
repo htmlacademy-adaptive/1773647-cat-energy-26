@@ -15,10 +15,10 @@
 
 .additional-product__caption {
   width: calc(100% - 40px);
+  display: inline-block;
 }
 
 .additional-product__title {
-  display: inline-block;
   font-family: inherit;
   font-weight: 400;
   font-size: 24px;
@@ -144,21 +144,23 @@
     }
   }
 
+  .additional-product__caption {
+    width: calc(100% - 60px);
+    margin-left: 30px;
+  }
+
   .additional-product__title {
-    padding: 0 36px;
+    display: inline-block;
+    padding: 0 40px;
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 80px;
+    background-color: @color-light;
   }
 
   .additional-product__container {
     width: calc(100% - 60px);
-    margin: 0 30px;
     padding-bottom: 76px;
-  }
-
-  .additional-product__caption {
-    margin-left: 36px;
   }
 
   .additional-product__list {
@@ -219,7 +221,6 @@
   }
 
   .additional-product__caption {
-    margin: 0 auto;
     max-width: 1440px;
   }
 

@@ -1,8 +1,5 @@
 .information {
   padding-bottom: 32px;
-}
-
-.information__title {
   position: relative;
 
   &::before {
@@ -10,25 +7,27 @@
     position: absolute;
     top: 14px;
     left: 0;
-    width: 94vw;
+    width: 100%;
     height: 2px;
     background-color: @bt-basic;
     z-index: -2;
   }
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 13px;
-    left: 0;
-    width: 164px;
-    height: 4px;
-    background-color: @color-light;
-    z-index: -1;
-  }
+.information__box {
+  width: calc(100% - 40px);
+  background-color: @color-light;
+}
+
+.information__title {
+  display: inline-block;
+  padding-left: 21px;
+  padding-right: 21px;
 }
 
 .information__inner {
+  width: calc(100% - 40px);
+  margin: 0 auto;
   padding-top: 34px;
 }
 
@@ -68,27 +67,30 @@
 }
 
 @media (min-width: @tablet-width) {
-  .information__title::before {
-    left: -4rem;
-    top: 20px;
-    width: 100vw;
+  .information::before {
+    top: 86px;
   }
 
-  .information__title::after {
-    left: -36px;
-    top: 19px;
-    width: 290px;
+  .information__box {
+    width: calc(100% - 60px);
+    margin-left: 30px;
+  }
+
+  .information__title {
+    display: inline-block;
+    padding: 0 40px;
   }
 
   .information__inner {
+    width: calc(100% - 60px);
     padding-top: 57px;
   }
 
-  .information__inner,
+  .information__list,
   .information__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 61px;
+    column-gap: 60px;
   }
 
   .information__item {
@@ -108,13 +110,19 @@
 @media (min-width: @desktop-width) {
   .information {
     padding-bottom: 80px;
-  }
 
-  .information__title::before {
-    left: -7rem;
+    &::before {
+      top: 90px;
+    }
   }
 
   .information__inner {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+
+  .information__list {
     grid-template-columns: repeat(4, 1fr);
     gap: 104px;
   }

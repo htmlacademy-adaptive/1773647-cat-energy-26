@@ -1,30 +1,33 @@
-.contacts-use__subtitle {
+.contacts-use {
   position: relative;
+  margin-top: 26px;
 
   &::before {
     content: "";
     position: absolute;
     top: 14px;
     left: 0;
-    width: 94vw;
+    width: 100%;
     height: 2px;
     background-color: @bt-basic;
     z-index: -2;
   }
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 13px;
-    left: 0;
-    width: 200px;
-    height: 4px;
-    background-color: @color-light;
-    z-index: -1;
-  }
+.contacts-use__box {
+  width: calc(100% - 40px);
+  background-color: @color-light;
+}
+
+.contacts-use__subtitle {
+  display: inline-block;
+  padding-left: 21px;
+  padding-right: 21px;
 }
 
 .contacts-use__wrapper {
+  width: calc(100% - 40px);
+  margin: 0 auto;
   padding-bottom: 35px;
   padding-top: 35px;
 }
@@ -66,24 +69,26 @@
 
 @media (min-width: @tablet-width) {
   .contacts-use {
-    padding-top: 70px;
+    margin-top: 0;
+
+    &::before {
+      top: 86px;
+    }
   }
 
-  .contacts-use__subtitle::before {
-    left: -4rem;
-    top: 20px;
-    width: 100vw;
+  .contacts-use__box {
+    width: calc(100% - 60px);
+    margin-left: 30px;
   }
 
-  .contacts-use__subtitle::after {
-    left: -36px;
-    top: 19px;
-    width: 593px;
+  .contacts-use__subtitle {
+    display: inline-block;
+    padding: 0 40px;
   }
 
   .contacts-use__wrapper {
-    padding-top: 76px;
-    padding-bottom: 0;
+    width: calc(100% - 60px);
+    padding: 76px 40px 0 40px;
   }
 
   .contacts__wrapper-light {
@@ -105,7 +110,14 @@
 }
 
 @media (min-width: @desktop-width) {
+  .contacts-use::before {
+    top: 90px;
+  }
+
   .contacts-use__wrapper {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1440px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
