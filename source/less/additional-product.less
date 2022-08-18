@@ -90,9 +90,9 @@
   width: 280px;
   height: 290px;
   background-color: @bt-basic;
+  background-image: url("../../source/img/background-promo/background-promo-mobile.jpeg");
   background-size: cover;
   background-position: center center;
-  background-image: url("../../source/img/background-promo-mobile.jpeg");
   margin-top: 35px;
 
   &::before {
@@ -113,6 +113,10 @@
     width: 78px;
     height: 80px;
     background-image: url("../img/icons/gift.svg");
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-promo/background-promo-mobile@2x.jpeg");
   }
 }
 
@@ -191,6 +195,7 @@
     margin-top: 69px;
     width: 100%;
     height: 200px;
+    background-image: url("../img/background-promo/background-promo-tablet.jpeg");
 
     &::before {
       display: none;
@@ -198,6 +203,10 @@
 
     &::after {
       left: 77px;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-promo/background-promo-tablet@2x.jpeg");
     }
   }
 
@@ -258,6 +267,7 @@
 
   .additional-product__promo {
     margin-left: auto;
+    background-image: url("../img/background-promo/background-promo-desktop.jpeg");
     width: 245px;
     height: 289px;
     margin-top: 0;
@@ -265,6 +275,10 @@
     &::after {
       top: 55px;
       left: 81px;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-promo/background-promo-desktop@2x.jpeg");
     }
   }
 
