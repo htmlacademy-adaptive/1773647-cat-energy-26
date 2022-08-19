@@ -118,13 +118,23 @@
         </div>
         <div class="service-example-slider slider">
           <div class="slider__wrapper">
-            <img class="slider__picture-after" src="img/cat/viewport-after-mobile.png" width="280" height="256" alt="Изображение кота до.">
+            <picture>
+              <source media="(min-width: 768px)" srcset="./img/cat/viewport-after-tablet.png 1x, ./img/cat/viewport-after-tablet@2x.png 2x">
+              <img class="slider__picture slider__picture-after" src="img/cat/viewport-after-mobile.png" srcset="img/cat/viewport-after-mobile@2x.png 2x" width="280" height="256" alt="Изображение кота до.">
+            </picture>
           </div>
           <div class="slider__wrapper">
-            <img class="slider__picture-before" src="img/cat/viewport-before-mobile.png" width="280" height="256" alt="Изображение кота после.">
+            <picture>
+              <source media="(min-width: 768px)" srcset="./img/cat/viewport-before-tablet.png 1x, ./img/cat/viewport-before-tablet@2x.png 2x">
+              <img class="slider__picture slider__picture-before" src="img/cat/viewport-before-mobile.png" srcset="img/cat/viewport-before-mobile@2x.png 2x" width="280" height="256" alt="Изображение кота после.">
+            </picture>
           </div>
           <div class="slider-container">
-            <button class="slider__curtain" type="button"></button>
+            <div class="slider-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18">
+                <path d="M8 0 0 9l8 9V0ZM24 9l-8-9v18l8-9Z"/>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
