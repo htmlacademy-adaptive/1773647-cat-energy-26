@@ -109,7 +109,7 @@
     position: absolute;
     content: "";
     top: 58px;
-    left: 100px;
+    left: 83px;
     width: 78px;
     height: 80px;
     background-image: url("../img/icons/gift.svg");
@@ -137,6 +137,15 @@
   display: inline-block;
   width: 100%;
   padding: 10px 0;
+
+  &:hover {
+    background-color: @bt-dark;
+  }
+
+  &:active {
+    background-color: @bt-dark;
+    color: rgba(@color-light, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {

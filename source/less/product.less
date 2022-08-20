@@ -87,6 +87,15 @@
   padding: 10px 0;
   border: none;
   color: @color-light;
+
+  &:hover {
+    background-color: @bt-dark;
+  }
+
+  &:active {
+    background-color: @bt-dark;
+    color: rgba(@color-light, 0.3);
+  }
 }
 
 .product__card-additional {
@@ -155,6 +164,16 @@
   padding: 10px 0;
   border: none;
   background-color: @bg-basic-light-dark;
+
+
+  &:hover {
+    background-color: @bg-additional-light-dark;
+  }
+
+  &:active {
+    background-color: @bg-additional-light-dark;
+    color: rgba(@color-basic-text, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {

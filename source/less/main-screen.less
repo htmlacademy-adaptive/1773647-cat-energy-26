@@ -6,7 +6,6 @@
   background-size: 100%;
 }
 
-
 .main-screen__wrapper {
   display: grid;
   justify-content: center;
@@ -64,6 +63,15 @@
   display: block;
   width: 100%;
   padding: 11px 0;
+
+  &:hover {
+    background-color: @bt-dark;
+  }
+
+  &:active {
+    background-color: @bt-dark;
+    color: rgba(@color-light, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
