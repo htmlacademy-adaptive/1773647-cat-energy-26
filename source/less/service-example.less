@@ -92,8 +92,8 @@
 @media (min-width: @tablet-width) {
   .service-example {
     position: relative;
-    padding-bottom: 55px;
-    background-image: linear-gradient(180deg, @color-light 495px, @bg-basic-light-dark 0);
+    padding-bottom: 100px;
+    background-image: linear-gradient(180deg, @color-light 653px, @bg-basic-light-dark 0);
 
     &::before {
       position: absolute;
@@ -127,7 +127,7 @@
   .service-example__list {
     display: grid;
     grid-template-columns: 162px 162px 2fr;
-    gap: 40px;
+    column-gap: 40px;
   }
 
   .service-example__content {
@@ -184,7 +184,8 @@
 @media (min-width: @desktop-width) {
   .service-example {
     margin-top: 133px;
-    background-image: linear-gradient(180deg, @color-light 140px, @bg-basic-light-dark 0);
+    background-image: linear-gradient(180deg, @color-light 217px, @bg-basic-light-dark 0);
+    padding-bottom: 0;
 
     &::before {
       display: none;
@@ -215,7 +216,7 @@
   }
 
   .service-example__content {
-    margin-top: 84px;
+    margin-top: 69px;
   }
 
   .service-example__name {
@@ -237,5 +238,6 @@
     grid-column: 1/4;
     justify-content: flex-start;
     width: 100%;
+    margin-top: 55px;
   }
 }

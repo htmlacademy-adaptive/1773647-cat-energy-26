@@ -9,14 +9,18 @@
 .slider__picture-after,
 .slider__picture-before {
   position: absolute;
-  right: 0;
   width: 140px;
   object-fit: cover;
+}
+
+.slider__picture-after {
+  right: 0;
   object-position: right;
 }
 
 .slider__picture-before {
   object-position: left;
+  left: 0;
 }
 
 .slider-container {
@@ -58,5 +62,35 @@
   .slider__picture {
     width: 560px;
     height: 512px;
+  }
+
+  .slider__picture-after,
+  .slider__picture-before {
+    width: 280px;
+    object-fit: cover;
+  }
+
+  .slider__picture-after {
+    right: 0;
+    object-position: right;
+  }
+
+  .slider__picture-before {
+    object-position: left;
+    left: 0;
+  }
+
+  .slider-container::before {
+    height: 521px;
+  }
+
+  .slider-button {
+    left: 46%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider {
+    margin-bottom: 85px;
   }
 }
