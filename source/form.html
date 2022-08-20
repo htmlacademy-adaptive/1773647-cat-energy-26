@@ -121,9 +121,11 @@
 
         <!-- Комментарий -->
         <div class="form__wrapper comment">
-          <span class="comment__box">
-            <h3 class="form__subtitle comment__subtitle">Комментарий</h3>
-          </span>
+          <div class="comment__container">
+            <span class="comment__box">
+              <h3 class="form__subtitle comment__subtitle">Комментарий</h3>
+            </span>
+          </div>
           <p class="form__comment comment__text">
               <textarea class="form__field comment__field" name="comment" id="comment-field" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
           </p>
@@ -131,9 +133,11 @@
 
         <!-- Дополнительна информация -->
         <div class="form__wrapper information">
-          <span class="information__box">
-            <h3 class="form__subtitle information__title">Дополнительно</h3>
-          </span>
+          <div class="information__container">
+            <span class="information__box">
+              <h3 class="form__subtitle information__title">Дополнительно</h3>
+            </span>
+          </div>
           <div class="information__inner">
             <ul class="form__list information__list">
               <li class="form__item information__item">
@@ -165,7 +169,7 @@
                 </label>
               </li>
             </ul>
-            <div class="information__container">
+            <div class="information__container-button">
               <button class="information__button form__button button" type="button">Отправить заявку</button>
               <span class="information__desc">* — Обязательные поля</span>
             </div>

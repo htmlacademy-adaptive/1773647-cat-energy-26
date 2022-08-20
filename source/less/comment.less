@@ -1,10 +1,10 @@
-.comment {
+.comment__container {
   position: relative;
 
   &::before {
     content: "";
     position: absolute;
-    top: 14px;
+    top: 50%;
     left: 0;
     width: 100%;
     height: 2px;
@@ -15,13 +15,12 @@
 
 .comment__box {
   width: calc(100% - 40px);
-  background-color: @color-light;
 }
 
 .comment__subtitle {
   display: inline-block;
-  padding-left: 21px;
-  padding-right: 21px;
+  background-color: @color-light;
+  padding: 0 20px;
 }
 
 .comment__text {
@@ -36,10 +35,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .comment::before {
-    top: 86px;
-  }
-
   .comment__box {
     width: calc(100% - 60px);
     margin-left: 30px;
@@ -58,8 +53,8 @@
 
 
 @media (min-width: @desktop-width) {
-  .comment::before {
-    top: 90px;
+  .comment__subtitle {
+    margin-left: 40px;
   }
 
   .comment__text {

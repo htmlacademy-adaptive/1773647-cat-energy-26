@@ -1,11 +1,10 @@
-.information {
-  padding-bottom: 32px;
+.information__container {
   position: relative;
 
   &::before {
     content: "";
     position: absolute;
-    top: 14px;
+    top: 50%;
     left: 0;
     width: 100%;
     height: 2px;
@@ -16,13 +15,12 @@
 
 .information__box {
   width: calc(100% - 40px);
-  background-color: @color-light;
 }
 
 .information__title {
   display: inline-block;
-  padding-left: 21px;
-  padding-right: 21px;
+  background-color: @color-light;
+  padding: 0 20px;
 }
 
 .information__inner {
@@ -67,8 +65,8 @@
 }
 
 @media (min-width: @tablet-width) {
-  .information::before {
-    top: 86px;
+  .information {
+    margin-bottom: 72px;
   }
 
   .information__box {
@@ -87,7 +85,7 @@
   }
 
   .information__list,
-  .information__container {
+  .information__container-button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
@@ -110,10 +108,10 @@
 @media (min-width: @desktop-width) {
   .information {
     padding-bottom: 80px;
+  }
 
-    &::before {
-      top: 90px;
-    }
+  .information__title {
+    margin-left: 40px;
   }
 
   .information__inner {
@@ -127,7 +125,7 @@
     gap: 104px;
   }
 
-  .information__container {
+  .information__container-button {
     gap: 105px;
   }
 }
