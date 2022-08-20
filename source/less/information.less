@@ -39,14 +39,28 @@
   padding-left: 46px;
 }
 
+.information__checkbox {
+  position: relative;
+}
+
 .information__checkbox-visible {
   content: "";
   position: absolute;
   top: -6px;
-  left: 0;
+  left: -45px;
   width: 30px;
   height: 30px;
   border: 1px solid @bg-light-dark;
+}
+
+.information-input[type="checkbox"]:checked + .information__checkbox-visible::before {
+  position: absolute;
+  content: "";
+  width: 26px;
+  height: 26px;
+  top: 2px;
+  left: 2px;
+  background-image: url("../img/icons/icons-tick.svg");
 }
 
 .information__button {
@@ -106,7 +120,7 @@
   }
 
   .information__checkbox-visible {
-    top: 0;
+    top: -7px;
   }
 
   .information__desc {

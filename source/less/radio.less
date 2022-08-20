@@ -39,6 +39,17 @@
   border-radius: 50%;
 }
 
+.radio__input[type="radio"]:checked + .radio__visible::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  top: 8px;
+  left: 8px;
+  background-color: @bt-basic;
+  border-radius: 50%;
+}
+
 @media (min-width: @tablet-width) {
   .radio {
     width: calc(100% - 60px);
@@ -67,6 +78,13 @@
     width: 40px;
     height: 40px;
     border: 1px solid @bg-light-dark;
+  }
+
+  .radio__input[type="radio"]:checked + .radio__visible::before {
+    width: 18px;
+    height: 18px;
+    top: 11px;
+    left: 11px;
   }
 }
 
