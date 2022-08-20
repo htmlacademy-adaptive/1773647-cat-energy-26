@@ -63,6 +63,11 @@
   background-image: url("../img/icons/icons-tick.svg");
 }
 
+.information-input:disabled + .information__checkbox-visible,
+.information-input:disabled ~ .information-label {
+  opacity: 0.3;
+}
+
 .information__button {
   display: block;
   width: 100%;
