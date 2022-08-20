@@ -94,9 +94,19 @@
     background-repeat: no-repeat;
   }
 
-  // &:hover::before {
-  //   background-size: ;
-  // }
+  &:hover::before {
+    background-image: url("../img/icons/icons-arrow-big.svg");
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active::before {
+    background-image: url("../img/icons/icons-arrow-big.svg");
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 @media (min-width: @tablet-width) {
