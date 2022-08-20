@@ -35,6 +35,14 @@
     background-color: @bc-slider;
     border-radius: 2px;
   }
+
+  &:hover::before {
+    background-color: @bt-basic;
+  }
+
+  &:active::before {
+    opacity: 0.6;
+  }
 }
 
 .slider-button {
@@ -50,6 +58,15 @@
   border: 2px solid @bc-slider;
   border-radius: 50%;
   fill: @bc-slider;
+
+  &:hover {
+    fill: @bt-basic;
+    border-color: @bt-basic;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 @media (min-width: @tablet-width) {
