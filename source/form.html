@@ -5,6 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Подбор программы</title>
+  <link rel="icon" href="./favicon.ico">
+  <link rel="icon" href="./img/favicon/favicon-16x16.svg" type="image/svg+xml">
+  <link rel="icon" href="./img/favicon/favicon-32x32.svg">
+  <link rel="apple-touch-icon" href="./img/favicon/favicon-152x152.svg">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="page__body">
@@ -12,7 +16,11 @@
   <!-- Шапка -->
   <header class="main-header">
     <a class="main-header__logo" href="index.html">
-      <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи.">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="./img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+        <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Кэт энерджи.">
+      </picture>
     </a>
     <nav class="main-nav main-nav--closed">
       <button class="main-nav__toggle" type="button">
@@ -42,10 +50,12 @@
       <div class="form__container">
         <h3 class="visually-hidden">Данные кота</h3>
         <p class="form__text">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
+      </div>
 
-        <!-- Анкета -->
-        <form class="form__wrapper" action="https://echo.htmlacademy.ru/" method="post">
-          <div class="form__data data">
+      <!-- Анкета -->
+      <form class="form__wrapper" action="https://echo.htmlacademy.ru/" method="post">
+        <div class="form__inner">
+          <div class="data">
             <div class="data__inner">
               <p class="data__questionnaire">
                 <label class="data__label form__text" for="name">Имя*</label>
@@ -60,64 +70,80 @@
                 <input class="data__field form__field " type="text" id="age" name="age" placeholder="7">
               </p>
             </div>
-
-            <!-- Радиокнопки -->
-          <ul class="form__list radio">
-            <li class="form__item">
-              <label class="form__radio radio__label">
-                <input class="radio__input visually-hidden" type="radio" name="some-name">
-                <span class="radio__visible radio__visible--checked"></span>
-                <span class="radio__label-text form__text">Похудение</span>
-              </label>
-            </li>
-            <li class="form__item">
-              <label class="radio__label">
-                <input class="form__radio-input visually-hidden" type="radio" name="some-name">
-                <span class="radio__visible  radio__visible--checked"></span>
-                <span class="radio__label-text form__text">Набор массы</span>
-              </label>
-            </li>
-            <li class="form__item">
-              <label class="radio__label">
-                <input class="form__radio-input visually-hidden" type="radio" name="some-name">
-                <span class="radio__visible"></span>
-                <span class="radio__label-text form__text">Не знаю (Нужен ваш совет)</span>
-              </label>
-            </li>
-          </ul>
           </div>
 
-          <!-- Данные владельца кота -->
-          <div class="form__wrapper contacts-use">
-            <h3 class="form__subtitle contacts-use__subtitle">Контактные данные (владельца кота)</h3>
-            <div class="contacts-use__wrapper">
-              <p class="contacts-use__inner">
-                <label class="form__text contacts-use__label" for="email">E-mail:*</label>
-                <input class="contacts-use__input-email form__field" type="email" id="email" name="email" placeholder="кuklachev@gmail.com" required>
-              </p>
-              <p class="contacts-use__inner">
-                <label class="contacts-use__label form__text" for="phone">Телефон:*</label>
-                <input class="contacts-use__input-phone form__field" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="8 (960) 900-60-90" required>
-              </p>
-            </div>
+          <!-- Радиокнопки -->
+          <div class="radio">
+            <ul class="form__list radio__wrapper">
+              <li class="form__item">
+                <label class="form__radio radio__label">
+                  <input class="radio__input visually-hidden" type="radio" name="some-name" checkbox>
+                  <span class="radio__visible"></span>
+                  <span class="radio__label-text form__text">Похудение</span>
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="radio__label">
+                  <input class="form__radio-input visually-hidden" type="radio" name="some-name">
+                  <span class="radio__visible"></span>
+                  <span class="radio__label-text form__text">Набор массы</span>
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="radio__label">
+                  <input class="form__radio-input visually-hidden" type="radio" name="some-name">
+                  <span class="radio__visible"></span>
+                  <span class="radio__label-text form__text">Не знаю (Нужен ваш совет)</span>
+                </label>
+              </li>
+            </ul>
           </div>
+        </div>
 
-          <!-- Комментарий -->
-          <div class="form__wrapper comment">
-            <h3 class="form__subtitle comment__subtitle">Комментарий</h3>
-            <p class="form__comment comment__text">
-              <textarea class="form__field comment__field" name="comment" id="comment-field" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
+        <!-- Данные владельца кота -->
+        <div class="form__wrapper contacts-use">
+          <div class="contacts-use__container">
+            <span class="contacts-use__box">
+              <h3 class="form__subtitle contacts-use__subtitle">Контактные данные (владельца кота)</h3>
+            </span>
+          </div>
+          <div class="contacts-use__wrapper">
+            <p class="contacts-use__inner">
+              <label class="form__text contacts-use__label" for="email">E-mail:*</label>
+              <input class="contacts-use__input-email  form__field" type="email" id="email" name="email" placeholder="кuklachev@gmail.com" required>
+            </p>
+            <p class="contacts-use__inner">
+              <label class="contacts-use__label form__text" for="phone">Телефон:*</label>
+              <input class="contacts-use__input-phone form__field" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="8 (960) 900-60-90" required>
             </p>
           </div>
+        </div>
 
-          <!-- Дополнительна информация -->
-          <div class="form__wrapper information">
-            <h3 class="form__subtitle information__title">Дополнительно</h3>
-            <ul class="form__list information__inner">
+        <!-- Комментарий -->
+        <div class="form__wrapper comment">
+          <div class="comment__container">
+            <span class="comment__box">
+              <h3 class="form__subtitle comment__subtitle">Комментарий</h3>
+            </span>
+          </div>
+          <p class="form__comment comment__text">
+              <textarea class="form__field comment__field" name="comment" id="comment-field" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
+          </p>
+        </div>
+
+        <!-- Дополнительна информация -->
+        <div class="form__wrapper information">
+          <div class="information__container">
+            <span class="information__box">
+              <h3 class="form__subtitle information__title">Дополнительно</h3>
+            </span>
+          </div>
+          <div class="information__inner">
+            <ul class="form__list information__list">
               <li class="form__item information__item">
                 <label class="information__checkbox">
                   <input class="information-input visually-hidden" type="checkbox" name="sweetener" checked>
-                  <span class="information__checkbox-visible information__checkbox-visible--checked"></span>
+                  <span class="information__checkbox-visible"></span>
                   <span class="information-label form__text">Сахарозаменитель</span>
                 </label>
               </li>
@@ -143,13 +169,13 @@
                 </label>
               </li>
             </ul>
-            <div class="information__container">
+            <div class="information__container-button">
               <button class="information__button form__button button" type="button">Отправить заявку</button>
               <span class="information__desc">* — Обязательные поля</span>
             </div>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </section>
 
     <!-- Контакты -->

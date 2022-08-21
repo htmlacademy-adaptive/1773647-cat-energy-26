@@ -1,6 +1,6 @@
-.form {
+.form__container {
   width: calc(100% - 40px);
-  margin: 0 20px;
+  margin: 0 auto;
   padding-top: 37px;
 }
 
@@ -22,13 +22,25 @@
   color: @color-basic-text;
   border: 1px solid @br-color-light;
   padding: 13px 0 13px 14px;
+
+  &:not(:disabled):hover {
+    border: 1px solid @bg-light-dark;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: @color-basic-text;
+  }
+}
+
+.form__field-error {
+  border-color: @status-error;
 }
 
 .form__list {
   position: relative;
   padding: 0;
   margin: 0;
-  padding-top: 22px;
 }
 
 .form__item {
@@ -46,7 +58,6 @@
 
 .form__wrapper {
   position: relative;
-  padding-top: 26px;
 }
 
 .form__button {
@@ -58,14 +69,9 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form {
-    width: calc(100% - 60px);
-    margin: 0 30px;
-    padding-top: 54px;
-  }
-
   .form__container {
-    padding-left: 40px;
+    width: calc(100% - 60px);
+    padding: 54px 40px 0 40px;
   }
 
   .form__wrapper {
@@ -95,10 +101,12 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form {
+  .form__container {
     width: 85%;
     margin: 0 auto;
     max-width: 1440px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .form__additional {
@@ -106,8 +114,12 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .form__container {
-    padding-left: 0;
+  .form__inner {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1440px;
   }
 
   .form__wrapper {

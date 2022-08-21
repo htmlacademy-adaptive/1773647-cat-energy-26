@@ -47,6 +47,7 @@
     width: 67px;
     height: 53px;
     background-image: url("../img/icons/cat_back-2.svg");
+    background-repeat: no-repeat;
   }
 }
 
@@ -89,7 +90,22 @@
     right: -22px;
     width: 32px;
     height: 10px;
-    background-image: url("../img/icons/arrow.svg");
+    background-image: url("../img/icons/icons-arrow.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover::before {
+    background-image: url("../img/icons/icons-arrow-big.svg");
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active::before {
+    background-image: url("../img/icons/icons-arrow-big.svg");
+    transition: all 0.3s ease-in-out;
   }
 }
 

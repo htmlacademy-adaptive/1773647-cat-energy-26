@@ -1,5 +1,8 @@
 .radio {
   position: relative;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  padding-top: 24px;
 
   &::before {
     position: absolute;
@@ -36,14 +39,35 @@
   border-radius: 50%;
 }
 
+.radio__input[type="radio"]:checked + .radio__visible::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  top: 8px;
+  left: 8px;
+  background-color: @bt-basic;
+  border-radius: 50%;
+}
+
+.radio__input:disabled + .radio__visible,
+.radio__input:disabled ~ .radio__label-text {
+  opacity: 0.3;
+}
+
 @media (min-width: @tablet-width) {
   .radio {
-    border: 1px solid @br-color-light;
-    padding: 25px 0 0 28px;
+    width: calc(100% - 60px);
+    padding: 0 40px;
 
     &::before {
       display: none;
     }
+  }
+
+  .radio__wrapper {
+    border: 1px solid @br-color-light;
+    padding: 25px 0 0 28px;
   }
 
   .radio__label {
@@ -60,12 +84,19 @@
     height: 40px;
     border: 1px solid @bg-light-dark;
   }
+
+  .radio__input[type="radio"]:checked + .radio__visible::before {
+    width: 18px;
+    height: 18px;
+    top: 11px;
+    left: 11px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .radio {
     max-width: 488px;
-    padding-top: 30px;
+    padding: 0;
   }
 
   .radio__label {
