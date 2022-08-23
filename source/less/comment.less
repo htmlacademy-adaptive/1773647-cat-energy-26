@@ -47,6 +47,7 @@
   }
 
   .comment__text {
+    box-sizing: border-box;
     width: calc(100% - 60px);
     padding: 76px 40px 0 40px;
   }
@@ -54,14 +55,22 @@
 
 
 @media (min-width: @desktop-width) {
+  .comment__box {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+
   .comment__subtitle {
-    margin-left: 40px;
+    margin-left: -40px;
   }
 
   .comment__text {
     width: 85%;
     margin: 0 auto;
     max-width: 1440px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .comment__field {

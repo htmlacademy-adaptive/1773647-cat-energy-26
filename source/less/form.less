@@ -70,6 +70,7 @@
 
 @media (min-width: @tablet-width) {
   .form__container {
+    box-sizing: border-box;
     width: calc(100% - 60px);
     padding: 54px 40px 0 40px;
   }
@@ -115,8 +116,9 @@
   }
 
   .form__inner {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
     width: 85%;
     margin: 0 auto;
     max-width: 1440px;

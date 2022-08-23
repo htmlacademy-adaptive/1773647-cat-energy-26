@@ -57,6 +57,7 @@
 
 @media (min-width: @tablet-width) {
   .radio {
+    box-sizing: border-box;
     width: calc(100% - 60px);
     padding: 0 40px;
 
@@ -95,8 +96,13 @@
 
 @media (min-width: @desktop-width) {
   .radio {
-    max-width: 488px;
+    width: 100%;
     padding: 0;
+    margin: 0;
+  }
+
+  .radio__wrapper {
+    padding-left: 0;
   }
 
   .radio__label {

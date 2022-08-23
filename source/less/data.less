@@ -51,7 +51,8 @@
   }
 
   .data__inner {
-    padding: 0 40px 0 40px;
+    box-sizing: border-box;
+    padding-left: 40px;
   }
 
   .data__questionnaire {
@@ -74,10 +75,13 @@
 
 @media (min-width: @desktop-width) {
   .data {
-    margin-right: 70px;
+    width: 100%;
   }
 
   .data__inner {
+    width: 100%;
     padding: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
