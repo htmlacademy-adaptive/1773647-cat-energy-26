@@ -29,6 +29,17 @@
     &::before {
       content: "";
       position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 695px;
+      background-color: @bt-dark;
+      z-index: -2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
       width: 100%;
       height: 720px;
       top: 0;
@@ -36,7 +47,7 @@
       background-image: url("../img/background-main-screen.jpeg");
       background-repeat: no-repeat;
       background-position: right top;
-      z-index: 0;
+      z-index: -1;
     }
   }
 }
