@@ -27,6 +27,7 @@
   width: calc(100% - 40px);
   margin: 0 auto;
   padding-top: 34px;
+  margin-bottom: 32px;
 }
 
 .information__inner:last-child {
@@ -60,7 +61,7 @@
   height: 26px;
   top: 2px;
   left: 2px;
-  background-image: url("../img/icons/icons-tick.svg");
+  background-image: url("../img/icons-tick.svg");
 }
 
 .information-input:disabled + .information__checkbox-visible,
@@ -108,8 +109,10 @@
   }
 
   .information__inner {
+    box-sizing: border-box;
     width: calc(100% - 60px);
     padding-top: 57px;
+    padding-left: 40px;
   }
 
   .information__list,
@@ -138,14 +141,21 @@
     padding-bottom: 80px;
   }
 
+  .information__box {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+
   .information__title {
-    margin-left: 40px;
+    margin-left: -40px;
   }
 
   .information__inner {
     width: 85%;
     margin: 0 auto;
     max-width: 1440px;
+    padding-left: 0;
   }
 
   .information__list {
