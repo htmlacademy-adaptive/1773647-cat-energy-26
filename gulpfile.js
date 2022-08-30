@@ -1,6 +1,6 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
-import sass from 'gulp-dart-sass';
+import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
@@ -15,9 +15,9 @@ import browser from 'browser-sync';
 // Styles
 
 export const styles = () => {
-  return gulp.src('source/sass/style.scss', { sourcemaps: true })
+  return gulp.src('source/less/style.less', { sourcemaps: true })
   .pipe(plumber())
-  .pipe(sass().on('error', sass.logError))
+  .pipe(less().on('error', less.logError))
   .pipe(postcss([
   autoprefixer(),
   csso()
@@ -98,7 +98,7 @@ const copy = (done) => {
 // Clean
 
 const clean = () => {
-  return del('build');
+  return deleteAsync('build');
 };
 
 // Server
