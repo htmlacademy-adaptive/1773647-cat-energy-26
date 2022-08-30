@@ -17,7 +17,7 @@ import browser from 'browser-sync';
 export const styles = () => {
   return gulp.src('source/less/style.less', { sourcemaps: true })
   .pipe(plumber())
-  .pipe(less().on('error', less.logError))
+  .pipe(less())
   .pipe(postcss([
   autoprefixer(),
   csso()
