@@ -35,20 +35,24 @@
 }
 
 .contacts__map {
-  position: relative;
   display: block;
   border: none;
   height: 362px;
   width: 100%;
-  z-index: -2;
 }
 
 .contacts__map-pic {
-  position: absolute;
   bottom: 0;
   display: block;
-  width: 100%;
   object-fit: cover;
+  background-image: url("../../img/location-mobile.jpeg");
+  z-index: -2;
+}
+
+@media (min-resolution: 2dppx) {
+  .contacts__map-pic {
+    background-image: url("../../img/location-mobile@2x.jpeg");
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -75,10 +79,19 @@
     text-align: end;
   }
 
-  .contacts__map,
-  .contacts__map-pic {
+  .contacts__map {
     height: 400px;
     object-fit: cover;
+  }
+
+  .contacts__map-pic {
+    background-image: url("../../img/location-tablet.jpeg");
+  }
+
+  @media (min-resolution: 2dppx) {
+    .contacts__map-pic {
+      background-image: url("../../img/location-tablet@2x.jpeg");
+    }
   }
 }
 
@@ -105,5 +118,15 @@
 
   .contacts__text {
     padding-left: 0;
+  }
+
+  .contacts__map-pic {
+    background-image: url("../../img/location-desktop.jpeg");
+  }
+
+  @media (min-resolution: 2dppx) {
+    .contacts__map-pic {
+      background-image: url("../../img/location-desktop@2x.jpeg");
+    }
   }
 }

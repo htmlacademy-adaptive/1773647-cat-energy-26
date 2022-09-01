@@ -45,13 +45,13 @@ const scripts = () => {
 // Images
 
 const optimizeImages = () => {
-  return gulp.src('source/img/**/*{jpg,jpeg,png}')
+  return gulp.src('source/img/**/*{jpg,jpeg,png,webp}')
   .pipe(squoosh())
   .pipe(gulp.dest('build/img'));
 }
 
 const copyImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg,jpeg}')
+  return gulp.src('source/img/**/*.{png,jpg,jpeg,webp}')
   .pipe(gulp.dest('build/img'))
 }
 
