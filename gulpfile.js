@@ -45,20 +45,20 @@ const scripts = () => {
 // Images
 
 const optimizeImages = () => {
-  return gulp.src('source/img/**/*{jpg,png}')
+  return gulp.src('source/img/**/*{jpg,jpeg,png}')
   .pipe(squoosh())
   .pipe(gulp.dest('build/img'));
 }
 
 const copyImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src('source/img/**/*.{png,jpg,jpeg}')
   .pipe(gulp.dest('build/img'))
 }
 
 // WebpP
 
 const createWebp = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src('source/img/**/*.{png,jpg,jpeg}')
   .pipe(squoosh({
   webp: {}
   }))
