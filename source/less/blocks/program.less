@@ -76,18 +76,20 @@
 .program__button {
   position: relative;
   display: block;
-  width: 134px;
+  max-width: 134px;
   font-size: 16px;
   line-height: 16px;
+  text-align: start;
   color: @color-dark-text;
   background-color: transparent;
-  padding-top: 38px;
+  margin-top: 38px;
+  margin-left: 20px;
 
   &::before {
     content: "";
     position: absolute;
-    bottom: 5px;
-    right: -22px;
+    bottom: 30%;
+    right: 0;
     width: 32px;
     height: 10px;
     background-image: url("../img/icons-arrow.svg");
@@ -171,10 +173,12 @@
     font-size: 20px;
     line-height: 30px;
     text-align: start;
-    padding-top: 48px;
+    margin-top: 48px;
+    margin-left: 0;
+    padding-right: 25px;
 
     &::before {
-      bottom: 11px;
+      bottom: 35%;
       right: -25px;
     }
   }

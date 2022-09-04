@@ -112,6 +112,7 @@
     margin-top: 41px;
     margin-left: 117px;
     order: -1;
+    max-width: 430px;
   }
 
   .main-screen__img {
@@ -127,7 +128,7 @@
   .main-screen__button {
     margin-top: 49px;
     margin-left: 117px;
-    width: 244px;
+    max-width: 244px;
     order: -1;
   }
 }
@@ -142,8 +143,8 @@
   }
 
   .main-screen__wrapper {
+    position: relative;
     display: grid;
-    grid-template-rows: 160px 72px auto;
     grid-template-areas: "title img" "text img" "button img";
     justify-content: start;
     justify-items: start;
@@ -153,18 +154,22 @@
   .main-screen__slogan {
     grid-area: title;
     max-width: 420px;
+    margin-bottom: 40px;
   }
 
   .main-screen__intro {
     grid-area: text;
     margin-top: 0;
+    margin-bottom: 52px;
   }
 
   .main-screen__img {
+    position: absolute;
     grid-area: img;
     margin-top: -80px;
     width: 552px;
     height: auto;
+    left: -80px;
   }
 
   .main-screen__button {
