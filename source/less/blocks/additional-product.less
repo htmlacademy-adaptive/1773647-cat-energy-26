@@ -4,7 +4,7 @@
   &::before {
     position: absolute;
     content: "";
-    top: 50%;
+    top: 65%;
     left: 0;
     width: 100%;
     height: 2px;
@@ -24,8 +24,9 @@
   font-size: 24px;
   line-height: 24px;
   margin: 0;
+  margin-top: 2px;
   padding-right: 22px;
-  padding-left: 21px;
+  padding-left: 19px;
   background-color: @color-light;
 }
 
@@ -33,8 +34,8 @@
   width: calc(100% - 40px);
   margin: 0 20px;
   padding-top: 13px;
-  padding-bottom: 35px;
-  margin-top: 32px;
+  margin-bottom: 35px;
+  margin-top: 36px;
 }
 
 .additional-product__table:last-child {
@@ -48,12 +49,16 @@
   &::before {
     content: "";
     position: absolute;
-    top: -12px;
+    top: -14px;
     left: 0;
     width: 100%;
     height: 1px;
     background-color: @bg-light-dark;
   }
+}
+
+.additional-product__list-three {
+  padding-bottom: 33px;
 }
 
 .additional-product__name {
@@ -93,7 +98,7 @@
   background-image: url("../img/background-promo-mobile.jpeg");
   background-size: cover;
   background-position: center center;
-  margin-top: 35px;
+  margin-top: 23px;
 
   &::before {
     content: "";
@@ -136,7 +141,7 @@
 .additional-product__button {
   display: inline-block;
   width: 100%;
-  padding: 10px 0;
+  padding: 11px 0;
 
   &:hover {
     background-color: @bt-dark;
@@ -150,7 +155,11 @@
 
 @media (min-width: @tablet-width) {
   .additional-product {
-    margin-top: 68px;
+    margin-top: 64px;
+  }
+
+  .additional-product__inner {
+    margin-bottom: 21px;
   }
 
   .additional-product__box {
@@ -160,7 +169,7 @@
 
   .additional-product__title {
     display: inline-block;
-    padding: 0 40px;
+    padding: 0 37px;
     font-size: 36px;
     line-height: 36px;
     background-color: @color-light;
@@ -169,11 +178,16 @@
   .additional-product__container {
     width: calc(100% - 60px);
     padding-bottom: 76px;
+    margin: 0 auto;
     margin-top: 80px;
+    padding-top: 0;
   }
 
   .additional-product__list {
-    padding: 26px 35px 28px 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 25px 35px 30px 35px;
     border: 1px solid @bg-light-dark;
     border-bottom: none;
 
@@ -194,6 +208,7 @@
   .additional-product__content {
     font-size: 16px;
     line-height: 20px;
+    margin-left: 52px;
   }
 
   .additional-product__promo {
@@ -224,6 +239,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .additional-product {
+    margin-top: 0;
+  }
+
   .additional-product__box {
     width: 85%;
     margin: 0 auto;
@@ -232,13 +251,15 @@
 
   .additional-product__title {
     margin-left: -40px;
+    padding: 0 42px;
   }
 
   .additional-product__container {
     width: 85%;
     margin: 0 auto;
     max-width: 1440px;
-    margin-top: 57px;
+    margin-top: 77px;
+    padding-bottom: 83px;
   }
 
   .additional-product__wrapper {
@@ -248,10 +269,11 @@
 
   .additional-product__list {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     border: none;
-    padding: 15px 0 18px 0;
+    padding: 15px 0 16px 0;
 
     &::before {
       display: block;
@@ -271,6 +293,7 @@
 
   .additional-product__content {
     margin-right: 38px;
+    margin-left: 0;
   }
 
   .additional-product__promo {
