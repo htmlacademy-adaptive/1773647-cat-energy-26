@@ -1,8 +1,6 @@
 .main-screen {
   width: calc(100% - 40px);
   margin: 0 20px 0 20px;
-  background-color: @bt-basic;
-  background-image: linear-gradient(180deg, #68b738 320px, #ffffff 0);
   background-size: 100%;
 }
 
@@ -17,7 +15,7 @@
   &::after {
     content: "";
     position: absolute;
-    height: 320px;
+    height: 300px;
     width: 100vw;
     top: 0;
     background-image: url("../img/background-main-screen-mobile.jpeg");
@@ -86,6 +84,7 @@
   .main-screen__wrapper {
     display: flex;
     flex-direction: column;
+    padding-top: 0;
 
     &::after {
       display: none;
@@ -98,7 +97,7 @@
     color: @color-dark-text;
     text-align: left;
     margin: 0;
-    margin-left: 117px;
+    margin-left: 89px;
     max-width: 416px;
     order: -1;
   }
@@ -110,7 +109,7 @@
     text-align: left;
     padding: 0;
     margin-top: 41px;
-    margin-left: 117px;
+    margin-left: 89px;
     order: -1;
     max-width: 430px;
   }
@@ -119,7 +118,7 @@
     position: relative;
     order: 0;
     margin: 0 auto;
-    margin-top: -65px;
+    margin-top: -81px;
     z-index: -2;
     width: 709px;
     height: auto;
@@ -127,9 +126,10 @@
 
   .main-screen__button {
     margin-top: 49px;
-    margin-left: 117px;
+    margin-left: 90px;
     max-width: 244px;
     order: -1;
+    padding: 16px 0;
   }
 }
 
@@ -155,27 +155,30 @@
     grid-area: title;
     max-width: 420px;
     margin-bottom: 40px;
+    margin-left: 83px;
   }
 
   .main-screen__intro {
     grid-area: text;
     margin-top: 0;
-    margin-bottom: 52px;
+    margin-bottom: 50px;
+    margin-left: 83px;
   }
 
   .main-screen__img {
     position: absolute;
     grid-area: img;
-    margin-top: -80px;
+    margin-top: -84px;
     width: 552px;
     height: auto;
-    left: -80px;
+    left: -54px;
   }
 
   .main-screen__button {
     display: block;
     grid-area: button;
-    padding: 14px 26px;
+    padding: 17px 26px;
     margin-top: 0;
+    margin-left: 83px;
   }
 }

@@ -1,6 +1,6 @@
 .benefits {
   width: calc(100% - 40px);
-  margin: 20px 20px 50px 20px;
+  margin: 20px 20px 53px 20px;
 }
 
 .benefits__title {
@@ -25,13 +25,13 @@
   line-height: 18px;
   color: @color-basic-text;
   list-style-type: none;
-  padding-top: 24px;
+  padding-top: 26px;
   max-width: 200px;
 
   &::after {
     content: "";
     position: absolute;
-    top: 22px;
+    top: 24px;
     left: -80px;
     width: 60px;
     height: 60px;
@@ -67,7 +67,7 @@
 @media (min-width: @tablet-width) {
   .benefits {
     width: calc(100% - 60px);
-    margin: 45px 30px 104px 30px;
+    margin: 52px 30px 104px 30px;
   }
 
   .benefits__title {
@@ -79,16 +79,16 @@
     counter-reset: section 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 153px;
-    row-gap: 140px;
+    column-gap: 61px;
+    row-gap: 130px;
     padding-left: 0;
-    margin-top: 72px;
+    margin-top: 68px;
     margin-bottom: 0;
   }
 
   .benefits__item {
     counter-increment: section;
-    max-width: 230px;
+    max-width: 245px;
     font-size: 16px;
     line-height: 24px;
     padding-top: 117px;
@@ -107,7 +107,7 @@
 
     &::after {
       left: 0;
-      top: 0;
+      top: 4px;
       width: 80px;
       height: 80px;
       background-size: 100%;
@@ -120,13 +120,14 @@
     width: 85%;
     margin: 0 auto;
     max-width: 1440px;
-    padding-top: 71px;
+    padding-top: 75px;
     padding-bottom: 0;
   }
 
   .benefits__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    column-gap: 78px;
     padding: 0;
   }
 }
