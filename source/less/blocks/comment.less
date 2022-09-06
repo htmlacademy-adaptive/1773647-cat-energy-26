@@ -31,11 +31,15 @@
 }
 
 .comment__field {
-  width: 95%;
+  width: 100%;
   resize: none;
 }
 
 @media (min-width: @tablet-width) {
+  .comment {
+    padding-top: 50px;
+  }
+
   .comment__box {
     width: calc(100% - 60px);
     margin-left: 30px;
@@ -49,12 +53,22 @@
   .comment__text {
     box-sizing: border-box;
     width: calc(100% - 60px);
-    padding: 76px 40px 0 40px;
+    padding: 36px 40px 0 40px;
+    margin-bottom: 0;
+  }
+
+  .comment__field {
+    resize: vertical;
+    height: 175px;
   }
 }
 
 
 @media (min-width: @desktop-width) {
+  .comment__container::before {
+    top: 58%;
+  }
+
   .comment__box {
     width: 85%;
     margin: 0 auto;
@@ -69,11 +83,13 @@
     width: 85%;
     margin: 0 auto;
     max-width: 1440px;
+    padding-top: 77px;
     padding-left: 0;
     padding-right: 0;
   }
 
   .comment__field {
+    resize: none;
     width: 100%;
     height: 174px;
   }

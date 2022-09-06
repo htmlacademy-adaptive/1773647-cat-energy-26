@@ -26,7 +26,7 @@
 .information__inner {
   width: calc(100% - 40px);
   margin: 0 auto;
-  padding-top: 34px;
+  padding-top: 22px;
   margin-bottom: 32px;
 }
 
@@ -34,9 +34,13 @@
   padding-bottom: 0;
 }
 
+.information__list {
+  margin-bottom: 18px;
+}
+
 .information__item {
   position: relative;
-  padding-bottom: 30px;
+  padding-bottom: 23px;
   padding-left: 46px;
 }
 
@@ -47,7 +51,7 @@
 .information__checkbox-visible {
   content: "";
   position: absolute;
-  top: -6px;
+  top: -4px;
   left: -45px;
   width: 30px;
   height: 30px;
@@ -57,10 +61,10 @@
 .information-input[type="checkbox"]:checked + .information__checkbox-visible::before {
   position: absolute;
   content: "";
-  width: 26px;
-  height: 26px;
-  top: 2px;
-  left: 2px;
+  width: 22px;
+  height: 22px;
+  top: -1px;
+  left: 1px;
   background-image: url("../img/icons-tick.svg");
 }
 
@@ -95,6 +99,7 @@
 
 @media (min-width: @tablet-width) {
   .information {
+    padding-top: 51px;
     margin-bottom: 72px;
   }
 
@@ -111,7 +116,7 @@
   .information__inner {
     box-sizing: border-box;
     width: calc(100% - 60px);
-    padding-top: 57px;
+    padding-top: 40px;
     padding-left: 40px;
   }
 
@@ -119,26 +124,51 @@
   .information__container-button {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
+    column-gap: 17px;
   }
 
   .information__item {
     position: relative;
-    padding-bottom: 50px;
+    padding-bottom: 42px;
+    padding-left: 59px;
   }
 
   .information__checkbox-visible {
-    top: -7px;
+    top: -12px;
+    left: -59px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .information-input[type="checkbox"]:checked + .information__checkbox-visible::before {
+    width: 30px;
+    height: 30px;
+    top: 6px;
+    left: 6px;
   }
 
   .information__desc {
+    font-size: 16px;
     text-align: start;
+    padding-top: 15px;
+    padding-left: 2px;
+  }
+
+  .information__button {
+    width: 87%;
+    padding: 16px 0;
+    font-size: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .information {
-    padding-bottom: 80px;
+    padding-top: 64px;
+    margin-bottom: 83px;
+  }
+
+  .information__container::before {
+    top: 58%;
   }
 
   .information__box {
@@ -155,15 +185,25 @@
     width: 85%;
     margin: 0 auto;
     max-width: 1440px;
+    padding-top: 61px;
     padding-left: 0;
   }
 
   .information__list {
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 104px;
+    column-gap: 80px;
+    margin-bottom: 24px;
   }
 
   .information__container-button {
-    gap: 105px;
+    gap: 76px;
+  }
+
+  .information__button {
+    width: 100%;
+  }
+
+  .information__desc {
+    padding-top: 18px;
   }
 }

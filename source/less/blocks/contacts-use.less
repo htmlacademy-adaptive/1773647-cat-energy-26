@@ -31,8 +31,8 @@
 .contacts-use__wrapper {
   width: calc(100% - 40px);
   margin: 0 auto;
-  padding-bottom: 35px;
-  padding-top: 35px;
+  padding-bottom: 8px;
+  padding-top: 17px;
 }
 
 .contacts-use__wrapper p:last-child {
@@ -59,8 +59,8 @@
 .contacts-use__input-email {
   background-image: url("../img/icons-email.svg");
   background-repeat: no-repeat;
-  background-size: 20px 14px;
-  background-position: 95%;
+  background-size: 21px 15px;
+  background-position: 93%;
 
   &:focus {
     background-image: url("../img/icons-email-focus.svg");
@@ -70,8 +70,8 @@
 .contacts-use__input-phone {
   background-image: url("../img/icons-phone.svg");
   background-repeat: no-repeat;
-  background-size: 20px 20px;
-  background-position: 95%;
+  background-size: 21px 21px;
+  background-position: 93%;
 
   &:focus {
     background-image: url("../img/icons-phone-focus.svg");
@@ -117,13 +117,13 @@
 
   .contacts-use__subtitle {
     display: inline-block;
-    padding: 0 40px;
+    padding: 0 36px;
   }
 
   .contacts-use__wrapper {
     box-sizing: border-box;
     width: calc(100% - 60px);
-    padding: 76px 40px 0 40px;
+    padding: 53px 35px 0 40px;
   }
 
   .contacts__wrapper-light {
@@ -132,21 +132,31 @@
 
   .contacts-use__inner {
     display: flex;
+    padding-bottom: 16px;
   }
 
   .contacts-use__label {
-    padding-right: 14px;
+    padding-right: 17px;
   }
 
   .contacts-use__input-email,
   .contacts-use__input-phone {
     flex-grow: 1;
+    background-position: 97%;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .contacts-use::before {
-    top: 90px;
+  .contacts-use {
+    padding-top: 22px;
+
+    &::before {
+      top: 90px;
+    }
+  }
+
+  .contacts-use__container::before {
+    top: 58%;
   }
 
   .contacts-use__box {
@@ -156,17 +166,20 @@
   }
 
   .contacts-use__wrapper {
-    width: 85%;
-    margin: 0 auto;
-    max-width: 1440px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
+    align-items: start;
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding-top: 73px;
     padding-left: 0;
     padding-right: 0;
   }
 
   .contacts-use__subtitle {
     margin-left: -40px;
+    padding: 0 40px;
   }
 }
