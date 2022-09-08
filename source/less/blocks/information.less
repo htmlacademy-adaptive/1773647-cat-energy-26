@@ -59,7 +59,7 @@
   border: 1px solid @bg-light-dark;
 }
 
-.information-input[type="checkbox"]:checked + .information__checkbox-visible::before {
+.information__input[type="checkbox"]:checked + .information__checkbox-visible::before {
   position: absolute;
   content: "";
   width: 22px;
@@ -70,11 +70,11 @@
   background-repeat: no-repeat;
 }
 
-.information-input:hover + .information__checkbox-visible {
+.information__input:hover + .information__checkbox-visible {
   border: 1px solid @bc-form;
 }
 
-.information-input:disabled + .information__checkbox-visible,
+.information__input:disabled + .information__checkbox-visible,
 .information-input:disabled ~ .information-label {
   opacity: 0.3;
 }
@@ -146,7 +146,7 @@
     height: 40px;
   }
 
-  .information-input[type="checkbox"]:checked + .information__checkbox-visible::before {
+  .information__input[type="checkbox"]:checked + .information__checkbox-visible::before {
     width: 30px;
     height: 30px;
     top: 6px;
