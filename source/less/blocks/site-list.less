@@ -4,7 +4,11 @@
   border-top: 1px solid #e6e6e6;
   list-style-type: none;
   text-align: center;
-  padding: 22px 22px 24px 22px;
+  padding: 20px 22px 23px 22px;
+}
+
+.site-list .site-list__item:nth-child(3) {
+  padding-bottom: 9px;
 }
 
 .site-list__link-light,
@@ -46,7 +50,7 @@
     }
   }
 
-  .site-list__link-active {
+  .site-list__link--active {
     position: relative;
 
     &::before {
@@ -79,11 +83,11 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
-  }
 
-  .site-list__link-active::before {
-    width: 100%;
-    background-color: @bt-basic;
+    &--active::before {
+      width: 100%;
+      background-color: @bt-basic;
+    }
   }
 
   .site-list__link-light--active::before {
