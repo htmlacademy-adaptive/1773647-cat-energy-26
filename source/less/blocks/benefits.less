@@ -1,6 +1,6 @@
 .benefits {
   width: calc(100% - 40px);
-  margin: 20px 20px 50px 20px;
+  margin: 20px 20px 53px 20px;
 }
 
 .benefits__title {
@@ -25,13 +25,13 @@
   line-height: 18px;
   color: @color-basic-text;
   list-style-type: none;
-  padding-top: 24px;
+  padding-top: 26px;
   max-width: 200px;
 
   &::after {
     content: "";
     position: absolute;
-    top: 22px;
+    top: 24px;
     left: -80px;
     width: 60px;
     height: 60px;
@@ -79,27 +79,25 @@
     counter-reset: section 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 61px;
+    row-gap: 130px;
     padding-left: 0;
-    margin-top: 90px;
+    margin-top: 68px;
+    margin-bottom: 0;
   }
 
   .benefits__item {
     counter-increment: section;
-    max-width: 230px;
+    max-width: 245px;
     font-size: 16px;
     line-height: 24px;
-    padding-top: 72px;
-
-    &:nth-child(3),
-    &:nth-child(4) {
-      padding-top: 252px;
-    }
+    padding-top: 115px;
 
     &::before {
       content: counter(section);
       position: absolute;
-      top: -68px;
-      right: 0;
+      top: -38px;
+      right: -4px;
       font-family: @main-font;
       font-size: 280px;
       line-height: 280px;
@@ -107,43 +105,17 @@
       z-index: -2;
     }
 
-    &:nth-child(3)::before {
-      top: 113px;
-    }
-
-    &:nth-child(4)::before {
-      top: 113px;
-    }
-
     &::after {
-      top: 81px;
       left: 0;
+      top: 2px;
       width: 80px;
       height: 80px;
       background-size: 100%;
     }
 
     &--teaf {
-      &::after {
-        top: -30px;
-      }
-    }
-
-    &--tub {
-      &::after {
-        top: -30px;
-      }
-    }
-
-    &--eat {
-      &::after {
-        top: 150px;
-      }
-    }
-
-    &--alarm {
-      &::after {
-        top: 150px;
+      &::before {
+        right: 20px;
       }
     }
   }
@@ -154,42 +126,22 @@
     width: 85%;
     margin: 0 auto;
     max-width: 1440px;
-    padding-top: 71px;
+    padding-top: 72px;
     padding-bottom: 0;
   }
 
   .benefits__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    column-gap: 78px;
     padding: 0;
   }
 
-  .benefits__item {
-    padding-top: 72px;
+  .benefits__item::before {
+    right: -4px;
+  }
 
-    &:nth-child(3),
-    &:nth-child(4) {
-      padding-top: 72px;
-    }
-
-    &--eat {
-      &::after {
-        top: -30px;
-      }
-    }
-
-    &--alarm {
-      &::after {
-        top: -30px;
-      }
-    }
-
-    &:nth-child(3)::before {
-      top: -68px;
-    }
-
-    &:nth-child(4)::before {
-      top: -68px;
-    }
+  .benefits__item--teaf::before {
+    right: 20px;
   }
 }

@@ -10,6 +10,8 @@
   <link rel="icon" href="./img/favicon-32x32.svg">
   <link rel="apple-touch-icon" href="./img/favicon-152x152.svg">
   <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font">
+  <link rel="preload" href="./fonts/oswaldregular.woff2" as="font">
 </head>
 <body class="page__body">
 
@@ -114,7 +116,8 @@
             </p>
             <p class="contacts-use__inner">
               <label class="contacts-use__label form__text" for="phone">Телефон:*</label>
-              <input class="contacts-use__input-phone form__field" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="8 (960) 900-60-90" required>
+              <input class="contacts-use__input-phone form__field" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" value="8 (960) 900-60-90"
+              required>
             </p>
           </div>
         </div>
@@ -127,7 +130,7 @@
             </h3>
           </div>
           <p class="form__comment comment__text">
-              <textarea class="form__field comment__field" name="comment" id="comment-field" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
+            <textarea class="form__field form__field-comment comment__field" name="comment" id="comment-field" cols="30" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
           </p>
         </div>
 
@@ -142,35 +145,35 @@
             <ul class="form__list information__list">
               <li class="form__item information__item">
                 <label class="information__checkbox">
-                  <input class="information-input visually-hidden" type="checkbox" name="sweetener" checked>
+                  <input class="information__input visually-hidden" type="checkbox" name="sweetener" checked>
                   <span class="information__checkbox-visible"></span>
                   <span class="information-label form__text">Сахарозаменитель</span>
                 </label>
               </li>
               <li class="form__item information__item">
                 <label class="information__checkbox">
-                  <input class="information-input visually-hidden" type="checkbox" name="water">
+                  <input class="information__input visually-hidden" type="checkbox" name="water">
                   <span class="information__checkbox-visible"></span>
                   <span class="information__label form__text">Питьевая вода</span>
                 </label>
               </li>
               <li class="form__item information__item">
                 <label class="information__checkbox">
-                  <input class="information-input visually-hidden" type="checkbox" name="milk">
+                  <input class="information__input visually-hidden" type="checkbox" name="milk">
                   <span class="information__checkbox-visible"></span>
                   <span class="information__label form__text">Молоко</span>
                 </label>
               </li>
               <li class="form__item information__item">
                 <label class="information__checkbox">
-                  <input class="information-input visually-hidden" type="checkbox" name="vitamins">
+                  <input class="information__input visually-hidden" type="checkbox" name="vitamins">
                   <span class="information__checkbox-visible"></span>
                   <span class="information-label form__text">Витамины</span>
                 </label>
               </li>
             </ul>
             <div class="information__container-button">
-              <button class="information__button form__button button" type="button">Отправить заявку</button>
+              <button class="information__button form__button button" type="submit">Отправить заявку</button>
               <span class="information__desc">* — Обязательные поля</span>
             </div>
           </div>
@@ -183,13 +186,15 @@
       <div class="contacts__wrapper-dark">
         <div class="contacts__inner-address">
           <h2 class="visually-hidden">Контакты</h2>
-          <p class="contacts__slogan">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__slogan">Приглашаем <br> к сотрудничеству дилеров!</p>
           <div>
             <p class="contacts__text">ул. Большая Конюшенная, д. 19/8</p>
           <p class="contacts__text">Санкт-Петербург</p>
           </div>
         </div>
-        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300312!2d30.320858716100684!3d59.93871916905415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1660073043713!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="contacts__map-wrapper">
+          <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab7c133ad3986941662704d020609c60329fcf0c666536268c67b335374e4443d&amp;source=constructor"></iframe>
+        </div>
       </div>
     </section>
   </main>
@@ -198,7 +203,7 @@
   <footer class="main-footer">
     <div class="main-footer__wrapper">
       <div class="main-footer__logo">
-        <a href="index.html">
+        <a href="index.html" aria-label="Ссылка на главную страницу.">
           <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy.">
         </a>
       </div>
@@ -207,15 +212,15 @@
       <div class="main-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="#">
-              <svg class="social__logo" width="28" height="22" aria-label="Логотип  Вконтакте.">
+            <a class="social__link social__link--vkontakte" href="#" aria-label="Ссылка на Вконтакте.">
+              <svg class="social__logo" width="28" height="22" aria-label="Логотип Вконтакте.">
                 <use xlink:href="./img/sprite.svg#vkontakte">
               </svg>
               <span class="visually-hidden">В Вконтакте</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="#">
+            <a class="social__link social__link--youtube" href="#" aria-label="Ссылка на Ютуб.">
               <svg width="28" height="22" aria-label="Логотип Ютуб.">
                 <use xlink:href="./img/sprite.svg#youtube">
               </svg>
@@ -223,7 +228,7 @@
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--telegram" href="#">
+            <a class="social__link social__link--telegram" href="#" aria-label="Ссылка на телеграмм.">
               <svg width="28" height="22" aria-label="Логотип Телеграма.">
                 <use xlink:href="./img/sprite.svg#telegram">
               </svg>
@@ -235,9 +240,9 @@
 
       <!-- HTML Academy -->
       <div class="main-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт Html Academy.">
           <p class="copyright__text">HTML Academy</p>
-          <svg width="27" height="34" aria-label="Логотип html Academy.">
+          <svg class="copyright__logo" width="27" height="34" aria-label="Логотип html Academy.">
             <use xlink:href="./img/sprite.svg#logo-htmlacademy">
           </svg>
         </a>

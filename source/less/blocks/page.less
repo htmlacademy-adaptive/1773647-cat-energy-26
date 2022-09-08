@@ -11,16 +11,15 @@
   font-size: 14px;
   line-height: 18px;
   color: @color-dark-text;
-  overflow-x: hidden;
 }
 
 .page__title {
-  padding-top: 27px;
+  margin-top: 28px;
 }
 
 @media (min-width: @desktop-width) {
   .page__title {
-    padding-top: 54px;
+    margin-top: 54px;
   }
 
   .page__img {
@@ -31,13 +30,20 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 50%;
+      min-width: 50%;
       height: 695px;
       background-color: @bt-dark;
       background-image: url("../img/background-main-screen.jpeg");
       background-repeat: no-repeat;
+      background-size: auto 100%;
       background-position: right top;
       z-index: -2;
+    }
+  }
+
+  @media (min-resolution: 2dppx) {
+    .page__img::before {
+      background-image: url("../../img/background-main-screen@2x.jpeg");
     }
   }
 }

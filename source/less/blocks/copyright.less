@@ -7,6 +7,7 @@
   line-height: 18px;
   color: @color-basic-text;
   text-decoration: none;
+  fill: @bc-slider;
 
   &:hover {
     fill: @bt-basic;
@@ -29,8 +30,10 @@
   .copyright__text {
     padding-right: 22px;
   }
+}
 
-  .copyring__img {
-    align-content: center;
+@media (min-width: @desktop-width) {
+  .copyright__link {
+    padding-top: 5px;
   }
 }
